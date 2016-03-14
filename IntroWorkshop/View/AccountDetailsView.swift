@@ -8,47 +8,77 @@
 
 import UIKit
 
-class AccountDetailsView: UIView {
+@IBDesignable
+class AccountDetailsView: NibDesignableView {
 
     @IBOutlet private weak var accountNameLabel: UILabel!
     @IBOutlet private weak var accountNumberLabel: UILabel!
     @IBOutlet private weak var availableFundsLabel: UILabel!
     @IBOutlet private weak var accountBalanceLabel: UILabel!
 
+    @IBInspectable
     var accountName: String? {
         didSet {
             accountNameLabel.text = accountName
         }
     }
 
+    @IBInspectable
     var accountNumber: String? {
         didSet {
             accountNumberLabel.text = accountNumber
         }
     }
 
+    @IBInspectable
     var availableFunds: String? {
         didSet {
             availableFundsLabel.text = availableFunds
         }
     }
 
+    @IBInspectable
     var accountBalance: String? {
         didSet {
             accountBalanceLabel.text = accountBalance
         }
     }
 
-    override func awakeAfter(using aDecoder: NSCoder) -> Any? {
-        super.awakeAfter(using: aDecoder)
-        return viewFromNib()
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        accountNameLabel.text = nil
-        accountNumberLabel.text = nil
-        availableFundsLabel.text = nil
-        accountBalanceLabel.text = nil
+        if accountName == nil {
+            accountNameLabel.text = nil
+        }
+        if accountNumber == nil {
+            accountNumberLabel.text = nil
+        }
+        if availableFunds == nil {
+            availableFundsLabel.text = nil
+        }
+        if accountBalance == nil {
+            accountBalanceLabel.text = nil
+        }
+    }
+
+    // MARK - Designer support
+
+    override var designerView: UIView? {
+        didSet {
+            guard let designerView = designerView as? AccountDetailsView else { return }
+
+            // setup the IBOutlet manually for designer
+            accountNameLabel = designerView.accountNameLabel
+            accountNumberLabel = designerView.accountNumberLabel
+            availableFundsLabel = designerView.availableFundsLabel
+            accountBalanceLabel = designerView.accountBalanceLabel
+        }
+    }
+
+    // if you want the designer to always have some static data
+    override func prepareForInterfaceBuilder() {
+        accountNameLabel.text = "[account name]"
+        accountNumberLabel.text = "[account number]"
+        availableFundsLabel.text = "[$0,000.00]"
+        accountBalanceLabel.text = "[$0,000.00]"
     }
 }
