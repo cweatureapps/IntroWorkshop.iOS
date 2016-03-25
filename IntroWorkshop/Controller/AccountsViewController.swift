@@ -17,6 +17,8 @@ class AccountsViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
 
+    fileprivate lazy var accountManager: AccountsManager = AccountsManager()
+    
     fileprivate var accounts: [Account]?
 
     override func viewDidLoad() {
@@ -25,8 +27,8 @@ class AccountsViewController: UIViewController {
         setupTableView()
         blurImage()
 
-        // call account service
-        AccountService().getAccounts { [weak self] result in
+        // call account manager
+        accountManager.getAccounts { [weak self] result in
             guard let this = self else { return }
 
             switch result {

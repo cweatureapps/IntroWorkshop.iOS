@@ -11,6 +11,7 @@ import Foundation
 struct Account {
 
     private enum JSONKeys {
+        static let id = "id"
         static let accounts = "accounts"
         static let accountName = "accountName"
         static let accountNumber = "accountNumber"
@@ -18,6 +19,7 @@ struct Account {
         static let accountBalance = "accountBalance"
     }
 
+    let id: String
     let accountName: String
     let accountNumber: String
     let availableFunds: Double
@@ -30,7 +32,8 @@ struct Account {
         return accountNumber.replacingOccurrences(of: regex, with: "X", options: .regularExpression)
     }
 
-    init(accountName: String, accountNumber: String, availableFunds: Double, accountBalance: Double) {
+    init(id: String, accountName: String, accountNumber: String, availableFunds: Double, accountBalance: Double) {
+        self.id = id
         self.accountName = accountName
         self.accountNumber = accountNumber
         self.availableFunds = availableFunds
@@ -38,17 +41,19 @@ struct Account {
     }
 
     init?(json: JSON) {
-        guard let accountName = json[JSONKeys.accountName] as? String,
+        guard let id =  json[JSONKeys.id] as? String, 
+            let accountName = json[JSONKeys.accountName] as? String,
             let accountNumber = json[JSONKeys.accountNumber] as? String,
             let availableFunds = json[JSONKeys.availableFunds] as? Double,
             let accountBalance = json[JSONKeys.accountBalance] as? Double else { return nil }
 
-        self.init(accountName: accountName, accountNumber: accountNumber, availableFunds: availableFunds, accountBalance: accountBalance)
+        self.init(id: id, accountName: accountName, accountNumber: accountNumber, availableFunds: availableFunds, accountBalance: accountBalance)
     }
 
+    // FIXME: simplify this using functional programming higher order functions
     static func accountList(json: JSON) -> [Account] {
         var results = [Account]()
-        if let accountsArray = json[JSONKeys.accounts] as? [[String: AnyObject]] {
+        if let accountsArray = json[JSONKeys.accounts] as? [JSON] {
             for item in accountsArray {
                 let account = Account(json: item)
                 if let account = account {

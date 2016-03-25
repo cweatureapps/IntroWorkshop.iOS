@@ -10,4 +10,5 @@ import Foundation
 
 enum ServiceURLs: String {
     case getAccounts = "https://raw.githubusercontent.com/cweatureapps/IntroWorkshop.iOS/master/MockResponses/GetAccounts.json"
+    case getTransactions = "https://raw.githubusercontent.com/cweatureapps/IntroWorkshop.iOS/master/MockResponses/GetTransactions.json"
 }

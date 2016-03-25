@@ -13,8 +13,16 @@ protocol ServiceHelper {
     typealias RequestCompletion = (Result<JSON, ServiceError>) -> Void
 
     /// Make a request to the backend.
-    func request(urlString: String, completion: @escaping RequestCompletion)
+    func request(urlString: String, param: String?, completion: @escaping RequestCompletion)
 }
+
+extension ServiceHelper {
+    func adjustUrl(urlString: String, withParam param: String) -> String {
+        let lastDotRange = urlString.range(of: ".", options: .backwards)
+        return urlString.substring(to: lastDotRange!.lowerBound) + param + urlString.substring(from: lastDotRange!.lowerBound)
+    }
+}
+
 
 /// Factory that returns the ServiceHelper to use.
 class ServiceHelperFactory {
@@ -32,9 +40,10 @@ enum ServiceError: Error {
 /// Service Helper class which makes a network request.
 class NetworkServiceHelper: ServiceHelper {
 
-    func request(urlString: String, completion: @escaping ServiceHelper.RequestCompletion) {
+    func request(urlString: String, param: String?, completion: @escaping ServiceHelper.RequestCompletion) {
+        let adjustedUrlString = param == nil ? urlString : self.adjustUrl(urlString: urlString, withParam: param!)
         let headers = ["Content-Type": "application/json"]
-        Alamofire.request(urlString, encoding: JSONEncoding.default, headers: headers)
+        Alamofire.request(adjustedUrlString, encoding: JSONEncoding.default, headers: headers)
          .responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -59,11 +68,12 @@ class StubServiceHelper: ServiceHelper {
 
     /// Loads a stub JSON file asynchronously from disk as if it were a backend response.
     /// Filename is based on convention, should be named the same as last part after the slash.
-    func request(urlString: String, completion: @escaping ServiceHelper.RequestCompletion) {
+    func request(urlString: String, param: String?, completion: @escaping ServiceHelper.RequestCompletion) {
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Constants.delay) {
             do {
-                let fileName = self.fileNameFrom(urlString: urlString)
+                let adjustedUrlString = param == nil ? urlString : self.adjustUrl(urlString: urlString, withParam: param!)
+                let fileName = self.fileNameFrom(urlString: adjustedUrlString)
                 let response = try self.loadJSONDictionary(from: fileName)
                 completion(.success(response))
             } catch (let error) {

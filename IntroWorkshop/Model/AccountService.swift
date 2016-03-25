@@ -16,7 +16,7 @@ class AccountService {
     }
 
     func getAccounts(completion: @escaping (Result<[Account], ServiceError>) -> Void) {
-        serviceHelper.request(urlString: ServiceURLs.getAccounts.rawValue) { result in
+        serviceHelper.request(urlString: ServiceURLs.getAccounts.rawValue, param: nil) { result in
             switch result {
             case .success(let json):
                 let accounts = Account.accountList(json: json)
