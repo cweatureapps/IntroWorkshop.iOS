@@ -50,18 +50,9 @@ struct Account {
         self.init(id: id, accountName: accountName, accountNumber: accountNumber, availableFunds: availableFunds, accountBalance: accountBalance)
     }
 
-    // FIXME: simplify this using functional programming higher order functions
     static func accountList(json: JSON) -> [Account] {
-        var results = [Account]()
-        if let accountsArray = json[JSONKeys.accounts] as? [JSON] {
-            for item in accountsArray {
-                let account = Account(json: item)
-                if let account = account {
-                    results.append(account)
-                }
-            }
-        }
-        return results
+        guard let accountsArray = json[JSONKeys.accounts] as? [JSON] else { return [] }
+        return accountsArray.flatMap{ return Account(json: $0) }
     }
 }
 
