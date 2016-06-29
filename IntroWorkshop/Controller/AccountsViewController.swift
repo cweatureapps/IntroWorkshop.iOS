@@ -10,19 +10,7 @@ import UIKit
 
 class AccountsViewController: UIViewController {
 
-    @IBOutlet weak var accountNameLabel: UILabel!
-    @IBOutlet weak var accountNumberLabel: UILabel!
-    @IBOutlet weak var availableFundsLabel: UILabel!
-    @IBOutlet weak var accountBalanceLabel: UILabel!
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        accountNameLabel.text = nil
-        accountNumberLabel.text = nil
-        availableFundsLabel.text = nil
-        accountBalanceLabel.text = nil
-    }
+    @IBOutlet weak var accountDetailsView: AccountDetailsView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +22,10 @@ class AccountsViewController: UIViewController {
             switch result {
             case .success(let accounts):
                 if let account = accounts.first {
-                    this.accountNameLabel.text = account.accountName
-                    this.accountNumberLabel.text = account.accountNumber
-                    this.availableFundsLabel.text = account.formattedAvailableFunds
-                    this.accountBalanceLabel.text = account.formattedAccountBalance
+                    this.accountDetailsView.accountName = account.accountName
+                    this.accountDetailsView.accountNumber = account.accountNumber
+                    this.accountDetailsView.availableFunds = account.formattedAvailableFunds
+                    this.accountDetailsView.accountBalance = account.formattedAccountBalance
                 }
             case .failure:
                 print("something went wrong")
