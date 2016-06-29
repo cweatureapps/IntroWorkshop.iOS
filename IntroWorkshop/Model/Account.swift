@@ -59,3 +59,23 @@ struct Account {
         return results
     }
 }
+
+extension Account {
+
+    private static var formatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.locale = Locale(identifier: "en_AU")
+        return formatter
+    }()
+
+    var formattedAvailableFunds: String {
+        return Account.formatter.string(from: NSNumber(value: availableFunds)) ?? ""
+    }
+
+    var formattedAccountBalance: String {
+        return Account.formatter.string(from: NSNumber(value: accountBalance)) ?? ""
+    }
+}

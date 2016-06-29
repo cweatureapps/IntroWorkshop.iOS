@@ -95,4 +95,10 @@ class AccountModelTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+
+    func testNumberFormatting() {
+        let account = Account(accountName: "foo", accountNumber: "1234", availableFunds: 123.45, accountBalance: 5678.9)
+        XCTAssertEqual(account.formattedAvailableFunds, "$123.45")
+        XCTAssertEqual(account.formattedAccountBalance, "$5,678.90")
+    }
 }
