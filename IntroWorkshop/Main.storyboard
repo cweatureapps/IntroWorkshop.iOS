@@ -2,15 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cTI-Eu-qdV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Accounts View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AccountsViewController" customModule="IntroWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="AccountsViewController" customModule="IntroWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,23 +18,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_sunset" translatesAutoresizingMaskIntoConstraints="NO" id="QWt-YI-FYr"/>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-nv-Q9B" customClass="AccountDetailsView" customModule="IntroWorkshop" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pP-UZ-gq1">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="2zl-FP-cTl"/>
-                                </constraints>
-                            </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountDetailsCell" rowHeight="136" id="d1F-K5-C3r" customClass="AccountDetailsViewCell" customModule="IntroWorkshop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="136"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d1F-K5-C3r" id="4uY-yN-bFJ">
+                                            <frame key="frameInset" width="375" height="136"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-nv-Q9B" customClass="AccountDetailsView" customModule="IntroWorkshop" customModuleProvider="target">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jcy-nv-Q9B" secondAttribute="trailing" constant="8" id="RbO-Aj-GEi"/>
+                                                <constraint firstItem="jcy-nv-Q9B" firstAttribute="top" secondItem="4uY-yN-bFJ" secondAttribute="top" id="Rnj-vp-LgR"/>
+                                                <constraint firstAttribute="bottom" secondItem="jcy-nv-Q9B" secondAttribute="bottom" constant="16" id="yJM-4t-0Cq"/>
+                                                <constraint firstItem="jcy-nv-Q9B" firstAttribute="leading" secondItem="4uY-yN-bFJ" secondAttribute="leading" constant="8" id="yqi-0k-XcK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="accountDetailsView" destination="jcy-nv-Q9B" id="XXp-6o-L1Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="iv6-0c-qjt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="spE-1v-2g0"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jcy-nv-Q9B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1vg-qb-Gpd"/>
-                            <constraint firstAttribute="trailing" secondItem="jcy-nv-Q9B" secondAttribute="trailing" constant="24" id="3x0-Bi-1bw"/>
                             <constraint firstItem="QWt-YI-FYr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="HBg-2R-KuC"/>
                             <constraint firstItem="QWt-YI-FYr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Hcx-Xw-XWd"/>
+                            <constraint firstAttribute="trailing" secondItem="3pP-UZ-gq1" secondAttribute="trailing" id="UfM-dv-7DG"/>
+                            <constraint firstItem="3pP-UZ-gq1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W3c-eE-6Jr"/>
                             <constraint firstItem="QWt-YI-FYr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wzm-Fy-M2M"/>
-                            <constraint firstItem="jcy-nv-Q9B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="cfX-Vq-Cas"/>
                             <constraint firstItem="QWt-YI-FYr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fFg-KB-wsv"/>
-                            <constraint firstItem="jcy-nv-Q9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="q5i-mw-jcB"/>
+                            <constraint firstItem="3pP-UZ-gq1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p5H-wA-d94"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3pP-UZ-gq1" secondAttribute="bottom" id="pIi-kj-rNN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9uD-kE-iIZ">
@@ -48,7 +72,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="accountDetailsView" destination="jcy-nv-Q9B" id="8hF-7e-9kn"/>
+                        <outlet property="tableView" destination="3pP-UZ-gq1" id="GSL-Cv-JpX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
