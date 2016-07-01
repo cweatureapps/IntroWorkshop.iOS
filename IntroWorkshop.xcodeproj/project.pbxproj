@@ -20,6 +20,7 @@
 		5B926E021D23A43400458C4E /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B926E011D23A43400458C4E /* AccountsViewController.swift */; };
 		5B926E041D23E8D600458C4E /* AccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B926E031D23E8D600458C4E /* AccountDetailsView.swift */; };
 		5B926E061D23E8F400458C4E /* AccountDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B926E051D23E8F400458C4E /* AccountDetailsView.xib */; };
+		5B95813D1D26729F00E58117 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B95813C1D26729F00E58117 /* UIImageEffects.m */; };
 		5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8394AE1D94B0FA007560CF /* AccountService.swift */; };
 		5B8394B11D94B0FA007560CF /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */; };
 		5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B93DD621D9002FD000BCE40 /* JSON.swift */; };
@@ -59,6 +60,9 @@
 		5B926E011D23A43400458C4E /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		5B926E031D23E8D600458C4E /* AccountDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsView.swift; sourceTree = "<group>"; };
 		5B926E051D23E8F400458C4E /* AccountDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountDetailsView.xib; sourceTree = "<group>"; };
+		5B9581381D2671C800E58117 /* IntroWorkshop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntroWorkshop-Bridging-Header.h"; sourceTree = "<group>"; };
+		5B95813B1D26729F00E58117 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		5B95813C1D26729F00E58117 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		5B8394AE1D94B0FA007560CF /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		5B93DD621D9002FD000BCE40 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */,
 				5B3CAD241C14E86E005568DF /* Info.plist */,
 				5B3CAD251C14E86E005568DF /* LaunchScreen.storyboard */,
+				5B9581381D2671C800E58117 /* IntroWorkshop-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,9 +189,11 @@
 			children = (
 				5B926E031D23E8D600458C4E /* AccountDetailsView.swift */,
 				5B926E051D23E8F400458C4E /* AccountDetailsView.xib */,
-				5B926DFD1D23989700458C4E /* NibDesignableView.swift */,
-				5B926DFE1D23989700458C4E /* UIView+ViewFromNib.swift */,
 				5B44D4741D248B2A003D63B6 /* AccountDetailsViewCell.swift */,
+				5B926DFD1D23989700458C4E /* NibDesignableView.swift */,
+				5B95813B1D26729F00E58117 /* UIImageEffects.h */,
+				5B95813C1D26729F00E58117 /* UIImageEffects.m */,
+				5B926DFE1D23989700458C4E /* UIView+ViewFromNib.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,7 +253,7 @@
 		5B3AF5031C0FA33B00ABF7AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Commonwealth Bank of Australia";
 				TargetAttributes = {
@@ -362,6 +369,7 @@
 				5B926E041D23E8D600458C4E /* AccountDetailsView.swift in Sources */,
 				5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */,
 				5B926DFF1D23989700458C4E /* NibDesignableView.swift in Sources */,
+				5B95813D1D26729F00E58117 /* UIImageEffects.m in Sources */,
 				5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */,
 				5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */,
 				5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */,
@@ -481,11 +489,14 @@
 			baseConfigurationReference = ABD7A765E902FA8AD6FCAAA3 /* Pods-IntroWorkshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IntroWorkshop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.commbank.IntroWorkshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "IntroWorkshop/Supporting Files/IntroWorkshop-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -494,11 +505,13 @@
 			baseConfigurationReference = 5721241A1DADB328046C2AE2 /* Pods-IntroWorkshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IntroWorkshop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.commbank.IntroWorkshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "IntroWorkshop/Supporting Files/IntroWorkshop-Bridging-Header.h";
 			};
 			name = Release;
 		};
