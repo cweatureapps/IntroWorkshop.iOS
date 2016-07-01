@@ -14,6 +14,7 @@ class AccountsViewController: UIViewController {
         static let startingEdgeInsets = UIEdgeInsets(top: 72.0, left: 0, bottom: 0.0, right: 0.0)
     }
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
 
     fileprivate var accounts: [Account]?
@@ -22,6 +23,7 @@ class AccountsViewController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         setupTableView()
+        blurImage()
 
         // call account service
         AccountService().getAccounts { [weak self] result in
@@ -48,6 +50,12 @@ class AccountsViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset = Constants.startingEdgeInsets
     }
+
+    private func blurImage() {
+        let blurImage = UIImageEffects.imageByApplyingBlur(to: backgroundImageView.image, withRadius: 40, tintColor: UIColor.clear, saturationDeltaFactor: 1.2, maskImage: nil)
+        backgroundImageView.image = blurImage
+    }
+
 }
 
 extension AccountsViewController: UITableViewDataSource {

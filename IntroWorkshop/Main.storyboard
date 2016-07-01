@@ -72,6 +72,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundImageView" destination="QWt-YI-FYr" id="yPM-cf-JdD"/>
                         <outlet property="tableView" destination="3pP-UZ-gq1" id="GSL-Cv-JpX"/>
                     </connections>
                 </viewController>
