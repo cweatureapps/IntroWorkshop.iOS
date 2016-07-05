@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cTI-Eu-qdV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VQK-AH-jmm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,12 +78,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="-301"/>
+            <point key="canvasLocation" x="2158" y="-56"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Accounts-->
         <scene sceneID="roM-wz-Aqn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cTI-Eu-qdV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Accounts" image="ic_account_wallet" id="oLQ-yJ-t2U">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.95294117647058818" green="0.68627450980392157" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lYm-LR-e9o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -96,12 +104,116 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRD-1C-czY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="-301"/>
+            <point key="canvasLocation" x="1188" y="-56"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="B8U-9E-uOn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VQK-AH-jmm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="uxa-40-JNl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cTI-Eu-qdV" kind="relationship" relationship="viewControllers" id="bn2-ei-byx"/>
+                        <segue destination="gFJ-Ac-ELx" kind="relationship" relationship="viewControllers" id="jJp-x0-75i"/>
+                        <segue destination="wJ8-zJ-rJQ" kind="relationship" relationship="viewControllers" id="i2v-we-g0p"/>
+                        <segue destination="kkV-M5-nzo" kind="relationship" relationship="viewControllers" id="OTE-F4-6HX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzk-4z-rge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="-56"/>
+        </scene>
+        <!--Cards-->
+        <scene sceneID="PRM-gx-fmz">
+            <objects>
+                <viewController id="gFJ-Ac-ELx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J2Z-8Q-KFd"/>
+                        <viewControllerLayoutGuide type="bottom" id="d3p-Eq-iUz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F3z-9V-BEK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cards" image="ic_cards" id="oSw-fu-f2i">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wZ-2i-MkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-457" y="1110"/>
+        </scene>
+        <!--Pay someone-->
+        <scene sceneID="1Jz-x0-pm1">
+            <objects>
+                <viewController id="wJ8-zJ-rJQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GDc-4q-IAR"/>
+                        <viewControllerLayoutGuide type="bottom" id="RXr-EY-3wW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8iu-Qg-JyG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pay someone" image="ic_pay_someone" id="yW8-D0-SPW">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sox-bn-0rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="1110"/>
+        </scene>
+        <!--BPAY-->
+        <scene sceneID="zxB-9i-jG5">
+            <objects>
+                <viewController id="kkV-M5-nzo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9rR-Wr-KUb"/>
+                        <viewControllerLayoutGuide type="bottom" id="dHz-2M-a04"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iy7-MT-GPl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BPAY" image="ic_bpay" id="xRM-d2-nhF">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYF-7G-wr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="1110"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg_sunset" width="1000" height="1600"/>
+        <image name="ic_account_wallet" width="24" height="24"/>
+        <image name="ic_bpay" width="17" height="27"/>
+        <image name="ic_cards" width="24" height="24"/>
         <image name="ic_hamburger" width="44" height="44"/>
+        <image name="ic_pay_someone" width="24" height="24"/>
         <image name="ic_search" width="44" height="44"/>
     </resources>
 </document>
