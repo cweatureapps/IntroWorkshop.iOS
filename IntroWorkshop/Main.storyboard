@@ -119,7 +119,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="cTI-Eu-qdV" kind="relationship" relationship="viewControllers" id="bn2-ei-byx"/>
-                        <segue destination="gFJ-Ac-ELx" kind="relationship" relationship="viewControllers" id="jJp-x0-75i"/>
+                        <segue destination="bDR-Y4-SEZ" kind="relationship" relationship="viewControllers" id="He6-2p-UAp"/>
                         <segue destination="wJ8-zJ-rJQ" kind="relationship" relationship="viewControllers" id="i2v-we-g0p"/>
                         <segue destination="kkV-M5-nzo" kind="relationship" relationship="viewControllers" id="OTE-F4-6HX"/>
                     </connections>
@@ -128,31 +128,15 @@
             </objects>
             <point key="canvasLocation" x="250" y="-56"/>
         </scene>
-        <!--Cards-->
-        <scene sceneID="PRM-gx-fmz">
+        <!--NavigationDemo-->
+        <scene sceneID="RlQ-22-U0N">
             <objects>
-                <viewController id="gFJ-Ac-ELx" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J2Z-8Q-KFd"/>
-                        <viewControllerLayoutGuide type="bottom" id="d3p-Eq-iUz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="F3z-9V-BEK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Cards" image="ic_cards" id="oSw-fu-f2i">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1wZ-2i-MkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="NavigationDemo" id="bDR-Y4-SEZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cards" image="ic_cards" id="6uc-9r-gOM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOe-EZ-IJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-457" y="1110"/>
+            <point key="canvasLocation" x="674.5" y="840"/>
         </scene>
         <!--Pay someone-->
         <scene sceneID="1Jz-x0-pm1">

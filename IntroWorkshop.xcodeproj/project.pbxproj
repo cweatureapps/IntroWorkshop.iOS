@@ -21,6 +21,9 @@
 		5B926E041D23E8D600458C4E /* AccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B926E031D23E8D600458C4E /* AccountDetailsView.swift */; };
 		5B926E061D23E8F400458C4E /* AccountDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B926E051D23E8F400458C4E /* AccountDetailsView.xib */; };
 		5B95813D1D26729F00E58117 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B95813C1D26729F00E58117 /* UIImageEffects.m */; };
+		5B9B11EA1D2C0A8E00463160 /* NavigationDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9B11E91D2C0A8E00463160 /* NavigationDemo.storyboard */; };
+		5B9B11ED1D2C0A9D00463160 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9B11EB1D2C0A9D00463160 /* FirstViewController.swift */; };
+		5B9B11EE1D2C0A9D00463160 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9B11EC1D2C0A9D00463160 /* SecondViewController.swift */; };
 		5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8394AE1D94B0FA007560CF /* AccountService.swift */; };
 		5B8394B11D94B0FA007560CF /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */; };
 		5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B93DD621D9002FD000BCE40 /* JSON.swift */; };
@@ -63,6 +66,9 @@
 		5B9581381D2671C800E58117 /* IntroWorkshop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntroWorkshop-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B95813B1D26729F00E58117 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		5B95813C1D26729F00E58117 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
+		5B9B11E91D2C0A8E00463160 /* NavigationDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavigationDemo.storyboard; sourceTree = "<group>"; };
+		5B9B11EB1D2C0A9D00463160 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		5B9B11EC1D2C0A9D00463160 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5B8394AE1D94B0FA007560CF /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		5B93DD621D9002FD000BCE40 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 				5B3AF5151C0FA33B00ABF7AA /* Assets.xcassets */,
 				5B3CAD1F1C14E86E005568DF /* Controller */,
 				5B3CAD261C14E86E005568DF /* Main.storyboard */,
+				5B9B11E91D2C0A8E00463160 /* NavigationDemo.storyboard */,
 				5B3CAD211C14E86E005568DF /* Model */,
 				5B3CAD221C14E86E005568DF /* Supporting Files */,
 				5B3CAD271C14E86E005568DF /* View */,
@@ -155,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				5B926E011D23A43400458C4E /* AccountsViewController.swift */,
+				5B9B11EB1D2C0A9D00463160 /* FirstViewController.swift */,
+				5B9B11EC1D2C0A9D00463160 /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 				5B3CAD2B1C14E86E005568DF /* LaunchScreen.storyboard in Resources */,
 				5B3AF5161C0FA33B00ABF7AA /* Assets.xcassets in Resources */,
 				5B3CAD301C14E95C005568DF /* Default-568h@2x.png in Resources */,
+				5B9B11EA1D2C0A8E00463160 /* NavigationDemo.storyboard in Resources */,
 				5B3CAD2C1C14E86E005568DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +377,8 @@
 				5B926E021D23A43400458C4E /* AccountsViewController.swift in Sources */,
 				5B926E001D23989700458C4E /* UIView+ViewFromNib.swift in Sources */,
 				5B926E041D23E8D600458C4E /* AccountDetailsView.swift in Sources */,
+				5B9B11EE1D2C0A9D00463160 /* SecondViewController.swift in Sources */,
+				5B9B11ED1D2C0A9D00463160 /* FirstViewController.swift in Sources */,
 				5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */,
 				5B926DFF1D23989700458C4E /* NibDesignableView.swift in Sources */,
 				5B95813D1D26729F00E58117 /* UIImageEffects.m in Sources */,
