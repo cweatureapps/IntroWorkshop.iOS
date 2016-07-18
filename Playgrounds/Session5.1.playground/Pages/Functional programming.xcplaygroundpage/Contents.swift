@@ -19,6 +19,13 @@ Create an array from the array below without any of the nil values.
 let possibleNumbers: [Int?] = [1, nil, 2, nil, nil, 3, 4, 5, 6, nil, 7, 8]
 
 
+// solution
+
+let nonNilElements = possibleNumbers.filter { $0 != nil }
+nonNilElements
+
+
+
 /*: 
 ## Map
 
@@ -34,6 +41,19 @@ Create an array where every value from `numbers` is a formatted currency String 
 
 i.e. we want ["$1.00", "$2.00", "$3.00", "$4.00", "$5.00", "$6.00"]
 */
+
+
+
+// solution
+
+let formatter = NumberFormatter()
+formatter.numberStyle = .currency
+formatter.minimumFractionDigits = 2
+formatter.maximumFractionDigits = 2
+formatter.locale = Locale(identifier: "en_AU")
+
+let formattedNumbers = numbers.map { formatter.string(from: NSNumber(value: $0))! }
+formattedNumbers
 
 
 
@@ -93,6 +113,13 @@ Hint: alt-click on the `arr`, you'll see that it's [Array<NSObject>]. Flattening
 let arr = [[1, 2], [3, 4], [[5]]]
 
 
+// solution
+arr.reduce([]) {
+    $0 + $1
+}
+
+
+
 /*:
 ## FlatMap
 
@@ -131,6 +158,12 @@ let users = [
 ]
 
 
+// solution
+let emails = users.flatMap { $0.emails }
+emails
+
+
+
 /*:
 ### Exercise 5
 
@@ -146,6 +179,37 @@ Expected result:
 NumberFormatter.localizedString(from: NSNumber(value: 1), number: .spellOut)
 
 let someNumbers = [12, 3, 7, 8, 22, 15, 1, 6]
+
+
+
+// solution - filter and map
+
+someNumbers.filter {
+    return $0 % 2 == 0
+    }.map {
+        NumberFormatter.localizedString(from: NSNumber(value: $0), number: .spellOut)
+}
+
+
+// solution - flatMap
+
+someNumbers.flatMap { (n) -> String? in
+    if n % 2 == 0 {
+        return NumberFormatter.localizedString(from: NSNumber(value: n), number: .spellOut)
+    } else {
+        return nil
+    }
+}
+
+// solution - reduce
+
+someNumbers.reduce([String]()) {
+    if $1 % 2 == 0 {
+        return $0 + [NumberFormatter.localizedString(from: NSNumber(value: $1), number: .spellOut)]
+    } else {
+        return $0
+    }
+}
 
 
 
