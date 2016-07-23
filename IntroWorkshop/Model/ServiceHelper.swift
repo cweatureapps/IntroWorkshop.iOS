@@ -27,8 +27,7 @@ extension ServiceHelper {
 /// Factory that returns the ServiceHelper to use.
 class ServiceHelperFactory {
     static func makeServiceHelper() -> ServiceHelper  {
-        // For now, we always return the stub version
-        return StubServiceHelper()
+        return UserDefaults.standard.bool(forKey: "stubmode") ? StubServiceHelper() : NetworkServiceHelper()
     }
 }
 
