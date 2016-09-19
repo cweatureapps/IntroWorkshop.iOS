@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5B2DA5BE1C3294E200C901FC /* GetAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BD1C3294E200C901FC /* GetAccounts.json */; };
+		5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BF1C3295DB00C901FC /* Account.swift */; };
+		5B2DA5C21C32964400C901FC /* AccountModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DA5C11C32964400C901FC /* AccountModelTests.swift */; };
 		5B3AF5161C0FA33B00ABF7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3AF5151C0FA33B00ABF7AA /* Assets.xcassets */; };
 		5B3CAD281C14E86E005568DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CAD201C14E86E005568DF /* ViewController.swift */; };
 		5B3CAD291C14E86E005568DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CAD231C14E86E005568DF /* AppDelegate.swift */; };
 		5B3CAD2B1C14E86E005568DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CAD251C14E86E005568DF /* LaunchScreen.storyboard */; };
 		5B3CAD2C1C14E86E005568DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CAD261C14E86E005568DF /* Main.storyboard */; };
 		5B3CAD301C14E95C005568DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */; };
+		5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B93DD621D9002FD000BCE40 /* JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		5B2DA5BD1C3294E200C901FC /* GetAccounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetAccounts.json; sourceTree = "<group>"; };
+		5B2DA5BF1C3295DB00C901FC /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		5B2DA5C11C32964400C901FC /* AccountModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModelTests.swift; sourceTree = "<group>"; };
 		5B3AF50B1C0FA33B00ABF7AA /* IntroWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3AF5151C0FA33B00ABF7AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B3AF51F1C0FA33B00ABF7AA /* IntroWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntroWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +43,7 @@
 		5B3CAD251C14E86E005568DF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3CAD261C14E86E005568DF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5B93DD621D9002FD000BCE40 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		5B3AF5221C0FA33B00ABF7AA /* IntroWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B2DA5C11C32964400C901FC /* AccountModelTests.swift */,
 				5B3AF5251C0FA33B00ABF7AA /* Info.plist */,
 			);
 			path = IntroWorkshopTests;
@@ -117,6 +124,8 @@
 		5B3CAD211C14E86E005568DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B2DA5BF1C3295DB00C901FC /* Account.swift */,
+				5B93DD621D9002FD000BCE40 /* JSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,7 +193,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Commonwealth Bank of Australia";
 				TargetAttributes = {
 					5B3AF50A1C0FA33B00ABF7AA = {
@@ -246,6 +255,8 @@
 			files = (
 				5B3CAD291C14E86E005568DF /* AppDelegate.swift in Sources */,
 				5B3CAD281C14E86E005568DF /* ViewController.swift in Sources */,
+				5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */,
+				5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2DA5C21C32964400C901FC /* AccountModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +292,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -324,8 +338,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -344,6 +360,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -376,10 +393,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IntroWorkshopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.commbank.IntroWorkshopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntroWorkshop.app/IntroWorkshop";
 			};
@@ -389,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IntroWorkshopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.commbank.IntroWorkshopTests;
