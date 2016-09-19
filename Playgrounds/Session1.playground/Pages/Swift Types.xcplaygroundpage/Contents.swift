@@ -94,6 +94,10 @@ Use `String.replacingOccurrences(of:with:options:range:)` with the `.regularExpr
 
 let s = " 123 asdf 45 678  9  "
 
+// Solution...
+
+s.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+
 
 //: ## Collection types
 
