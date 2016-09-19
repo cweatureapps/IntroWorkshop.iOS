@@ -86,6 +86,51 @@ The first two fibonacci numbers are 1 and the rest are the sum of the previous t
 
 */
 
+//: solution 1 - bad performance, exponential
+
+func fibonacci(_ n: Int) -> Int {
+    if n <= 2 {
+        return 1
+    } else {
+        return fibonacci(n-1) + fibonacci(n-2)
+    }
+}
+
+fibonacci(1)
+fibonacci(2)
+fibonacci(3)
+fibonacci(4)
+fibonacci(5)
+fibonacci(6)
+//fibonacci(20)
+
+//: solution 2
+
+func fib(_ n: Int, previous: (Int, Int) = (0,1)) -> Int {
+    guard n > 0 else { return 0 }
+    if n == 1 { return previous.1 }
+    return fib(n - 1, previous: (previous.1, previous.0 + previous.1))
+}
+fib(1)
+fib(2)
+fib(3)
+fib(4)
+fib(5)
+fib(6)
+fib(7)
+//fib(20)
+
+/*
+worked example...
+
+fib(4)
+= fib(4, (0,1) )
+= fib(3, (1,1) )
+= fib(2, (1,2) )
+= fib(1, (2,3) )
+= 3
+
+*/
 
 
 

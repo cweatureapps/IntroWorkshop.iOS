@@ -75,6 +75,15 @@ Given an array of Ints, print out only the even
 let nums = [0,1,2,3,4,5,6,7,8,9,10]
 
 
+// solution...
+for n in nums {
+    if n % 2 == 0 {
+        print(n)
+    }
+}
+
+
+
 /*:
 ## switch statement
 
@@ -151,6 +160,24 @@ var meatAndDairy: [Food] = []
 var fruitsAndVeges: [Food] = []
 
 //: For example, grains should be `[("Oats","Grains"), ("Rice","Grains")]`
+// solution...
+
+for f in foods {
+    switch f.foodGroup {
+        case "Vegetable", "Fruit":
+            fruitsAndVeges.append(f)
+        case "Meat", "Dairy":
+            meatAndDairy.append(f)
+        case "Grains":
+            grains.append(f)
+        default:
+            break
+    }
+}
+
+meatAndDairy
+grains
+fruitsAndVeges
 
 
 
