@@ -21,7 +21,7 @@ let amountTotal2 = amount * 10
 //: CGFloat is widely used by UIKit. It is a Float/Double depending on 32bit/64bit architecture
 
 let width: CGFloat = 16
-let frame = CGRectMake(10, 10, width, 10)
+let frame = CGRect(x: 10, y: 10, width: width, height: 10)
 let view = UIView(frame: frame)
 
 //: ## Strings
@@ -30,8 +30,8 @@ let message = "Hello World"
 
 //: **Modifying a String**
 
-message.lowercaseString
-message.uppercaseString
+message.lowercased()
+message.uppercased()
 message.isEmpty
 "".isEmpty
 
@@ -63,31 +63,32 @@ word.utf16.count
 //: **Substring and ranges**
 
 
-let index = message.startIndex.advancedBy(6)
-message.substringFromIndex(index)
+let index = message.index(message.startIndex, offsetBy: 6)
+message.substring(from: index)
 
-let range = message.startIndex..<message.startIndex.advancedBy(2)
-message.substringWithRange(range)
+let endIndex = message.index(message.startIndex, offsetBy: 2)
+let range = message.startIndex..<endIndex
+message.substring(with: range)
 
 let fullRange = message.startIndex..<message.endIndex
 
 //: **Other useful functions**
 
 // split
-"once upon a midnight dreary".componentsSeparatedByString(" ")
+"once upon a midnight dreary".components(separatedBy: " ")
 
 // trim
-"   abc   ".stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+"   abc   ".trimmingCharacters(in: .whitespacesAndNewlines)
 
 // replace
-"123 456 789".stringByReplacingOccurrencesOfString(" ", withString: "_")
+"123 456 789".replacingOccurrences(of: " ", with: "_")
 
 
 
 /*:
 ### Exercise
 
-Use `stringByReplacingOccurrencesOfString` with the `.RegularExpressionSearch` option to leave only numeric digits
+Use `String.replacingOccurrences(of:with:options:range:)` with the `.regularExpression` option to leave only numeric digits
 
 */
 
@@ -98,8 +99,7 @@ let s = " 123 asdf 45 678  9  "
 
 //: ### Array
 
-let messages1: Array<String> = ["foo", "bar"]
-let messages2: [String] = ["foo", "bar"]
+let messages1: [String] = ["foo", "bar"]
 let messages = ["foo", "bar"]
 
 
@@ -113,7 +113,7 @@ messages
 var animals: [String] = []
 animals.append("dog")
 animals.append("elephant")
-animals.insert("mouse", atIndex: 1)
+animals.insert("mouse", at: 1)
 animals.contains("dog")
 animals.count
 
@@ -123,11 +123,8 @@ animals
 
 
 //: ### Dictionary
-let dictionary1: Dictionary<String, Int> = ["a": 1, "b": 2]
-var dictionary2: [String: Int]
+var dictionary1: [String: Int] = ["a": 1, "b": 2]
 var favouriteThings = ["cat": "wool", "dog": "bone"]
-
-
 
 
 

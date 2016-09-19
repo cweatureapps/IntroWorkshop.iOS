@@ -31,34 +31,29 @@ foo!.isEmpty   // forced unwrapping. Will crash if it is actually nil.
 
 //: Bind the optional so that you can use it as a non-optional
 if let foo = foo {
-    foo.stringByAppendingString(" World")
+    foo.appending(" World")  //.stringByAppendingString(" World")
 } else {
     print("is nil")
 }
 
 
-//: bind multiple at a time with a condition
+//: bind multiple optionals at a time with a condition
 let title: String? = "Title"
 let isLoaded: Bool? = false
 
-if let title = title,
-    loaded = isLoaded where !loaded {
-        //refresh the page.
+if let title = title, let loaded = isLoaded, !loaded {
+    //refresh the page.
 }
 
 //: different ways of including a conditional
 let condition = true
 
 if condition {
-    if let title = title, loaded = isLoaded {
+    if let title = title, let loaded = isLoaded {
         
     }
 }
-if condition, let title = title, loaded = isLoaded where !loaded {
-    
-}
-
-if let title = title where condition, let loaded = isLoaded {
+if condition, let title = title, let loaded = isLoaded, !loaded {
     
 }
 
@@ -74,7 +69,7 @@ func doSomethingWithoutGuard(title: String?, loaded: Bool?) {
     if title == nil || loaded == nil {
         return
     }
-    if let title = title, loaded = loaded {
+    if let title = title, let loaded = loaded {
         let printString = title + ": " + (loaded ? "on":"off")
         print(printString)
     }
@@ -83,8 +78,8 @@ func doSomethingWithoutGuard(title: String?, loaded: Bool?) {
 //: With guard, it can be simplifed to:
 
 func doSomething(title: String?, loaded: Bool?) {
-    guard let title = title, loaded = loaded else { return }
-    let printString = title + ": " + (loaded ? "on":"off")
+    guard let title = title, let loaded = loaded else { return }
+    let printString = title + ": " + (loaded ? "on": "off")
     print(printString)
 }
 
@@ -154,8 +149,10 @@ Downcast to a subclass by using the typecast operator `as?` or `as!`
 
 You'll often see this in JSON parsing
 */
-
-let json: [String: AnyObject] = ["name": "Jemma Simmons"]
+typealias JSON = [String: Any]
+let jsonString = "{ \"name\": \"Jemma Simmons\" }"
+let jsonData = jsonString.data(using: .utf8)
+let json: JSON = (try! JSONSerialization.jsonObject(with: jsonData!, options: [])) as! JSON
 if let name = json["name"] as? String {
     print(name)
 }

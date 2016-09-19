@@ -21,20 +21,12 @@ sayHello2()
 
 /*:
 ## Parameters
-
-
-In Swift 2, the first param has no external name by default (objective-c convention)
 */
-func sayHelloToPersonNamed(name: String) -> String {
-    return "hello \(name)"
-}
-sayHelloToPersonNamed("Jim")
-
 
 /*:
-It's now preferred to explicitly name the first parameter.
-*/
-func sayHelloTo(firstPerson firstPerson: String, secondPerson: String) -> String {
+ All parameters are named
+ */
+func sayHelloTo(firstPerson: String, secondPerson: String) -> String {
     return "Hello \(firstPerson) and \(secondPerson)"
 }
 sayHelloTo(firstPerson: "Jack", secondPerson: "Jill")
@@ -53,7 +45,7 @@ This is considered bad practice, and should only be used in situations
 where omitting the param names actually makes it clearer,
 (e.g. in some mathematical functions)
 */
-func sum(a: Int, _ b: Int) -> Int {
+func sum(_ a: Int, _ b: Int) -> Int {
     return a + b
 }
 sum(1, 2)
@@ -68,7 +60,7 @@ func sum(numbers: Int...) -> Int {
     return result
 }
 sum(1, 2)
-sum(1, 2, 3)
+sum(numbers: 1, 2, 3)
 
 
 //: ## default param values
@@ -76,7 +68,7 @@ func sayHello3(name: String = "Sir/Madam") -> String {
     return "Hello \(name)"
 }
 sayHello3()
-sayHello3("John")
+sayHello3(name: "John")
 
 
 

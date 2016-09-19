@@ -108,7 +108,7 @@ struct Point: CustomStringConvertible {
     var x: Int
     var y: Int
 
-    mutating func move(x x: Int, y: Int) {
+    mutating func move(x: Int, y: Int) {
         self.x += x
         self.y += y
     }
@@ -134,7 +134,7 @@ Methods can be defined on the type itself, rather than on instances
 
 struct Helper {
     static func save(data: String) {
-        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "foo")
+        UserDefaults.standard.set(data, forKey: "foo")
     }
 }
 

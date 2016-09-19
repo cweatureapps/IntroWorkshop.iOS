@@ -5,6 +5,8 @@ import Foundation
 
 //: Example
 
+typealias JSON = [String: Any]
+
 struct Person: CustomStringConvertible {
     let firstName: String
     let lastName: String
@@ -16,7 +18,7 @@ struct Person: CustomStringConvertible {
         self.age = age
     }
 
-    init?(dictionary: [String: AnyObject]) {
+    init?(dictionary: JSON) {
         if let firstName = dictionary["firstName"] as? String,
             let lastName = dictionary["lastName"] as? String,
             let age = dictionary["age"] as? Int {
@@ -41,13 +43,12 @@ struct Person: CustomStringConvertible {
 let bart = Person(firstName: "Bart", lastName: "Simpson", age: 12)
 
 
-let json = [
+let json: JSON = [
     "firstName": "Lisa",
     "lastName": "Simpson",
     "age": 10
 ]
 let lisa = Person(dictionary: json)
-
 
 
 //: [Next](@next)

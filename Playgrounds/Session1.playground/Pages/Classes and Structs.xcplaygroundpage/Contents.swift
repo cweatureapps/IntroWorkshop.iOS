@@ -20,7 +20,7 @@ struct Point {
     var x: Int
     var y: Int
 
-    func equals(point: Point) -> Bool {
+    func equals(_ point: Point) -> Bool {
         return point.x == x && point.y == y
     }
 }

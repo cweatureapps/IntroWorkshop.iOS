@@ -157,6 +157,10 @@ var fruitsAndVeges: [Food] = []
 /*:
 ## Guard
 Guards provide syntax for an early exit of a function
+
+    guard condition else {
+        // do something if condition fails
+    }
 */
 
 let message = [
@@ -181,7 +185,7 @@ func printErrorMessage3(json: [String: String]) {
     print(json["errorMessage"])
 }
 
-printErrorMessage3(message)
+printErrorMessage3(json: message)
 
 
 
