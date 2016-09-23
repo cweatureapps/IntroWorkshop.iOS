@@ -182,7 +182,6 @@ typealias Coordinate = (x: Int, y: Int)
 let coordinate3: Coordinate = (x: 100, y: 300)
 
 
-
 /*:
 
 ## `Any` and `AnyObject`

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Enumerations'/>
+        <page name='Closures'/>
+        <page name='Closures 2'/>
+        <page name='Extension'/>
+        <page name='Generics'/>
+        <page name='Error handling'/>
+        <page name='Result type'/>
+        <page name='Exercises'/>
+    </pages>
+</playground>

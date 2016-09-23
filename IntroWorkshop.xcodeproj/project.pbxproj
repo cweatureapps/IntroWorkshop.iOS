@@ -11,14 +11,18 @@
 		5B2DA5BE1C3294E200C901FC /* GetAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BD1C3294E200C901FC /* GetAccounts.json */; };
 		5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BF1C3295DB00C901FC /* Account.swift */; };
 		5B2DA5C21C32964400C901FC /* AccountModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DA5C11C32964400C901FC /* AccountModelTests.swift */; };
+		5B3858291FD0C9E100AB8F83 /* GetAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BD1C3294E200C901FC /* GetAccounts.json */; };
 		5B3AF5161C0FA33B00ABF7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3AF5151C0FA33B00ABF7AA /* Assets.xcassets */; };
 		5B3CAD281C14E86E005568DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CAD201C14E86E005568DF /* ViewController.swift */; };
 		5B3CAD291C14E86E005568DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CAD231C14E86E005568DF /* AppDelegate.swift */; };
 		5B3CAD2B1C14E86E005568DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CAD251C14E86E005568DF /* LaunchScreen.storyboard */; };
 		5B3CAD2C1C14E86E005568DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CAD261C14E86E005568DF /* Main.storyboard */; };
 		5B3CAD301C14E95C005568DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */; };
+		5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8394AE1D94B0FA007560CF /* AccountService.swift */; };
+		5B8394B11D94B0FA007560CF /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */; };
 		5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B93DD621D9002FD000BCE40 /* JSON.swift */; };
 		5B96E4CA1FCFDAB100027BE6 /* AccountsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96E4C91FCFDAB100027BE6 /* AccountsResponse.swift */; };
+		5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF7C0A1D955B2600D18FE5 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +51,12 @@
 		5B3CAD251C14E86E005568DF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3CAD261C14E86E005568DF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5B8394AE1D94B0FA007560CF /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		5B93DD621D9002FD000BCE40 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		5B96E4C91FCFDAB100027BE6 /* AccountsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsResponse.swift; sourceTree = "<group>"; };
 		68507C42538B1AF4DD4FEE2E /* Pods-IntroWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
+		5BCF7C0A1D955B2600D18FE5 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +151,10 @@
 			children = (
 				5B2DA5BF1C3295DB00C901FC /* Account.swift */,
 				5B96E4C91FCFDAB100027BE6 /* AccountsResponse.swift */,
+				5B8394AE1D94B0FA007560CF /* AccountService.swift */,
 				5B93DD621D9002FD000BCE40 /* JSON.swift */,
+				5BCF7C0A1D955B2600D18FE5 /* Result.swift */,
+				5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3858291FD0C9E100AB8F83 /* GetAccounts.json in Resources */,
 				5B3CAD2B1C14E86E005568DF /* LaunchScreen.storyboard in Resources */,
 				5B3AF5161C0FA33B00ABF7AA /* Assets.xcassets in Resources */,
 				5B3CAD301C14E95C005568DF /* Default-568h@2x.png in Resources */,
@@ -341,7 +352,10 @@
 				5B3CAD281C14E86E005568DF /* ViewController.swift in Sources */,
 				5B96E4CA1FCFDAB100027BE6 /* AccountsResponse.swift in Sources */,
 				5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */,
+				5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */,
+				5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */,
 				5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */,
+				5B8394B11D94B0FA007560CF /* ServiceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

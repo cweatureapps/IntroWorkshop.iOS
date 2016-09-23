@@ -66,4 +66,29 @@ class AccountModelTests: XCTestCase {
             XCTAssertEqual(account.accountBalance, 34.56)
         }
     }
+
+    func testGetAccounts() {
+        let exp = expectation(description: "testGetAccounts")
+
+        // FIXME: Use constructor DI to create a service which uses the StubServiceHelper
+        //        let service = AccountService(serviceHelper: StubServiceHelper())
+
+        // FIXME: call account service
+        //        service.getAccounts { result in
+        //
+        //            // FIXME: put asserts here
+        //            switch result {
+        //            case .success:
+        //            case .failure:
+        //            }
+        //
+        //            exp.fulfill()   // this tells the test the async is complete
+        //        }
+
+        // if async call doesn't run, fail the test
+        waitForExpectations(timeout: 5) { error in
+            guard let error = error else { return }
+            XCTFail(error.localizedDescription)
+        }
+    }
 }
