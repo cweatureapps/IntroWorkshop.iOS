@@ -67,20 +67,27 @@ class AccountModelTests: XCTestCase {
     func testGetAccounts() {
         let exp = expectation(description: "testGetAccounts")
 
-        // FIXME: Use constructor DI to create a service which uses the StubServiceHelper
-        //        let service = AccountService(serviceHelper: StubServiceHelper())
+        // Use constructor DI to create a service which uses the StubServiceHelper
+        let service = AccountService(serviceHelper: StubServiceHelper())
 
-        // FIXME: call account service
-        //        service.getAccounts { result in
-        //
-        //            // FIXME: put asserts here
-        //            switch result {
-        //            case .success:
-        //            case .failure:
-        //            }
-        //
-        //            exp.fulfill()   // this tells the test the async is complete
-        //        }
+        // call account service
+        service.getAccounts { result in
+
+            // put asserts here
+            switch result {
+            case .success(let accounts):
+                XCTAssertEqual(accounts.count, 1)
+                let account = accounts.first!
+                XCTAssertEqual(account.accountName, "Complete Access")
+                XCTAssertEqual(account.accountNumber, "602-000 6412 3154")
+                XCTAssertEqual(account.availableFunds, 3456.75)
+                XCTAssertEqual(account.accountBalance, 4456.75)
+            case .failure:
+                XCTFail("error occurred")
+            }
+
+            exp.fulfill()   // this tells the test the async is complete
+        }
 
         // if async call doesn't run, fail the test
         waitForExpectations(timeout: 5) { error in
