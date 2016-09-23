@@ -68,6 +68,10 @@ Hint: `sqrt(Double)` takes in a Double as a parameter, so you may need to constr
 
 
 
+// solution
+numbers.map {
+    sqrt(Double($0))
+}.sorted(by: >)
 
 
 

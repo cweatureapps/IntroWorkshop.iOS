@@ -165,9 +165,18 @@ and has a property `symbol` which returns the symbol for the currency.
 
 enum Currency: String {
     case aud = "AUD"
-    // FIXME: other cases
+    case eur = "EUR"
+    case gbp = "GBP"
+    case krw = "KRW"
 
-    // FIXME: `symbol` property
+    var symbol: String {
+        switch self {
+        case .aud: return "$"
+        case .eur: return "€"
+        case .gbp: return "£"
+        case .krw: return "₩"
+        }
+    }
 }
 
 
@@ -175,7 +184,8 @@ enum Currency: String {
 
 let currencyCode = "GBP"
 
-// FIXME: use the enum to convert into "£"
+let currency = Currency(rawValue: currencyCode)
+currency?.symbol  // "£"
 
 
 

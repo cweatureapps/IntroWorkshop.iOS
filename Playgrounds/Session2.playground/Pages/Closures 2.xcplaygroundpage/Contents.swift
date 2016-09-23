@@ -37,5 +37,18 @@ v.center
 v.frame.size
 v.frame.origin
 
+//----------------------------------------
+
+// solution
+
+UIView.animate(withDuration: 0.5, animations: {
+    v.center = canvas.center
+}) { _ in  // use underscore when you dont need variable
+    UIView.animate(withDuration: 0.5) {
+        v.bounds.size.width = canvas.bounds.width
+        v.bounds.size.height = canvas.bounds.height
+    }
+}
+
 
 //: [Next](@next)
