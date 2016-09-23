@@ -11,14 +11,24 @@ import Foundation
 class AccountService {
     private var serviceHelper: ServiceHelper
 
-    // FIXME: Change this so that you can use constructor DI, passing through a StubServiceHelper when calling from the unit test
-    // See also `ServiceHelperFactory` which has a factory method for creating the correct ServiceHelper
-    init() {
-        serviceHelper = NetworkServiceHelper()
+    init(serviceHelper: ServiceHelper = ServiceHelperFactory.makeServiceHelper()) {
+        self.serviceHelper = serviceHelper
     }
 
-    // FIXME: Define a completion closure, which can be called to pass back a Result enum
-//    func getAccounts(completion: /* FIXME */) {
-//    }
+    func getAccounts(completion: @escaping (Result<[Account], ServiceError>) -> Void) {
+        serviceHelper.request(urlString: ServiceURLs.getAccounts.rawValue) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let accountsResponse = try JSONDecoder().decode(AccountsResponse.self, from: data)
+                    completion(.success(accountsResponse.accounts))
+                } catch {
+                     completion(.failure(.json))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 
 }

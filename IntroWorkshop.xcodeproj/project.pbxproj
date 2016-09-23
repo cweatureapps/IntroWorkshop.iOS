@@ -22,6 +22,7 @@
 		5B8394B11D94B0FA007560CF /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */; };
 		5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B93DD621D9002FD000BCE40 /* JSON.swift */; };
 		5B96E4CA1FCFDAB100027BE6 /* AccountsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96E4C91FCFDAB100027BE6 /* AccountsResponse.swift */; };
+		5BCF7C061D95421E00D18FE5 /* ServiceURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF7C051D95421E00D18FE5 /* ServiceURLs.swift */; };
 		5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF7C0A1D955B2600D18FE5 /* Result.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		5B96E4C91FCFDAB100027BE6 /* AccountsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsResponse.swift; sourceTree = "<group>"; };
 		68507C42538B1AF4DD4FEE2E /* Pods-IntroWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
 		5BCF7C0A1D955B2600D18FE5 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		5BCF7C051D95421E00D18FE5 /* ServiceURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceURLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				5B93DD621D9002FD000BCE40 /* JSON.swift */,
 				5BCF7C0A1D955B2600D18FE5 /* Result.swift */,
 				5B8394AF1D94B0FA007560CF /* ServiceHelper.swift */,
+				5BCF7C051D95421E00D18FE5 /* ServiceURLs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */,
 				5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */,
 				5B8394B11D94B0FA007560CF /* ServiceHelper.swift in Sources */,
+				5BCF7C061D95421E00D18FE5 /* ServiceURLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
