@@ -81,11 +81,66 @@ LinkedListStack
 */
 
 
+//--------------------
+
+//: ### Solution
+
+class Node<T> {
+    let value: T
+    var prevNode: Node?
+    var nextNode: Node?
+
+    init(value: T) {
+        self.value = value
+    }
+}
+
+class LinkedListStack<T> {
+
+    var firstNode: Node<T>?
+    var lastNode: Node<T>?
+    var count = 0
+
+    init() {
+    }
+
+    func push(_ value: T) {
+        let newNode = Node<T>(value: value)
+        if let lastNode = lastNode {
+            lastNode.nextNode = newNode
+            newNode.prevNode = lastNode
+            self.lastNode = newNode
+        } else {
+            // no last node, must be empty
+            firstNode = newNode
+            lastNode = newNode
+        }
+        count += 1
+    }
+
+    func pop() -> T? {
+        guard let firstNode = firstNode, let lastNode = lastNode else { return nil }
+        count -= 1
+        // one node
+        if firstNode === lastNode {
+            let result = lastNode.value
+            self.firstNode = nil
+            self.lastNode = nil
+            return result
+        } else {
+            let result = lastNode.value
+            self.lastNode = lastNode.prevNode
+            return result
+        }
+    }
+}
+//--------------------
 
 
 // expected output
 
-var list = Stack<Int>()
+// var list = Stack<Int>()
+var list = LinkedListStack<Int>()
 list.count
 
 list.push(100)

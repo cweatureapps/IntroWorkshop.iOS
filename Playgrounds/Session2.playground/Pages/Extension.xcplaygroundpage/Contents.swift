@@ -27,12 +27,30 @@ extension Int {
 */
 
 
+//------------
+
+// solution
+
+extension Double {
+    var square: Double {
+        return self * self
+    }
+    var squareRoot: Double {
+        return sqrt(self)
+    }
+    func plus(_ b: Double) -> Double {
+        return self + b
+    }
+}
+
+//------------------
+
 
 // expected output
 
-//9.0.squareRoot  // 3
-//8.0.square      // 64
-//9.0.plus(4.0)   // 13
+9.0.squareRoot  // 3
+8.0.square      // 64
+9.0.plus(4.0)   // 13
 
 
 //: [Next](@next)
