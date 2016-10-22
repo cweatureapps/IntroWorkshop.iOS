@@ -14,6 +14,7 @@ class AccountsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar()
         
         // call account service
         AccountService().getAccounts { [weak self] result in
@@ -31,6 +32,13 @@ class AccountsViewController: UIViewController {
                 print("something went wrong")
             }
         }
+    }
+
+    private func setupNavBar() {
+        guard let navBar = navigationController?.navigationBar else { return }
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        navBar.shadowImage = UIImage()
+        navBar.isTranslucent = true
     }
 
 }
