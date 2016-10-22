@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cTI-Eu-qdV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -39,16 +39,44 @@
                             <constraint firstItem="jcy-nv-Q9B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="q5i-mw-jcB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9uD-kE-iIZ">
+                        <barButtonItem key="leftBarButtonItem" image="ic_hamburger" id="DZJ-kJ-EzS">
+                            <color key="tintColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ic_search" id="1uC-VS-mvA">
+                            <color key="tintColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="accountDetailsView" destination="jcy-nv-Q9B" id="8hF-7e-9kn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="-40"/>
+            <point key="canvasLocation" x="746" y="-301"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="roM-wz-Aqn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cTI-Eu-qdV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lYm-LR-e9o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2pz-8T-Mgd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRD-1C-czY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="-301"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg_sunset" width="1000" height="1600"/>
+        <image name="ic_hamburger" width="44" height="44"/>
+        <image name="ic_search" width="44" height="44"/>
     </resources>
 </document>
