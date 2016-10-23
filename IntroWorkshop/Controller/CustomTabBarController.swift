@@ -50,6 +50,7 @@ extension CustomTabBarController: UITabBarControllerDelegate {
         let identifier = modalVC.identifier!
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)
+        vc.transitioningDelegate = DepthModalTransitioningDelegate.sharedInstance
         present(vc, animated: true, completion: nil)
         return false
     }
