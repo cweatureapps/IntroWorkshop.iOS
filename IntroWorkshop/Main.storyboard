@@ -22,10 +22,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountDetailsCell" rowHeight="136" id="d1F-K5-C3r" customClass="AccountDetailsViewCell" customModule="IntroWorkshop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="136"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d1F-K5-C3r" id="4uY-yN-bFJ">
-                                            <frame key="frameInset" width="375" height="136"/>
+                                            <frame key="frameInset" width="1000" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-nv-Q9B" customClass="AccountDetailsView" customModule="IntroWorkshop" customModuleProvider="target">
@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="-457" y="1110"/>
         </scene>
-        <!--View Controller-->
+        <!--Modal Tab View Controller-->
         <scene sceneID="1Jz-x0-pm1">
             <objects>
-                <viewController id="wJ8-zJ-rJQ" sceneMemberID="viewController">
+                <viewController id="wJ8-zJ-rJQ" customClass="ModalTabViewController" customModule="IntroWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GDc-4q-IAR"/>
                         <viewControllerLayoutGuide type="bottom" id="RXr-EY-3wW"/>
@@ -172,10 +172,50 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="paySomeone"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sox-bn-0rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="415" y="1110"/>
+        </scene>
+        <!--Pay Someone View Controller-->
+        <scene sceneID="aqk-E9-1lC">
+            <objects>
+                <viewController id="YMO-Wa-Llb" customClass="PaySomeoneViewController" customModule="IntroWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qzY-Fz-P0d"/>
+                        <viewControllerLayoutGuide type="bottom" id="dQi-NC-WwG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="18s-R6-wO8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay someone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHl-Ct-Emx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mHl-Ct-Emx" firstAttribute="centerX" secondItem="18s-R6-wO8" secondAttribute="centerX" id="36z-8K-dnU"/>
+                            <constraint firstItem="mHl-Ct-Emx" firstAttribute="centerY" secondItem="18s-R6-wO8" secondAttribute="centerY" id="dRa-1d-9Nt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dAn-38-j4G">
+                        <barButtonItem key="leftBarButtonItem" title="close" id="JwI-Dj-eL9">
+                            <connections>
+                                <segue destination="TP5-4g-1ai" kind="unwind" unwindAction="unwindToTabBarControllerWithSegue:" id="V3j-eX-UGG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEu-IG-Wue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TP5-4g-1ai" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1949.5999999999999" y="1914.6926536731635"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zxB-9i-jG5">
@@ -201,6 +241,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYF-7G-wr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1265" y="1110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K4j-pI-dMh">
+            <objects>
+                <navigationController storyboardIdentifier="paySomeone" automaticallyAdjustsScrollViewInsets="NO" id="feu-CC-4Tg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d7C-Gb-Kgy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YMO-Wa-Llb" kind="relationship" relationship="rootViewController" id="XyF-xq-WQG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y9o-kR-3dI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.8" y="1914.6926536731635"/>
         </scene>
     </scenes>
     <resources>
