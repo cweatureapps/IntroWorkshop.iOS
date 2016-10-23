@@ -80,12 +80,11 @@
             </objects>
             <point key="canvasLocation" x="2158" y="-56"/>
         </scene>
-        <!--Accounts-->
+        <!--Navigation Controller-->
         <scene sceneID="roM-wz-Aqn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cTI-Eu-qdV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Accounts" image="ic_account_wallet" id="oLQ-yJ-t2U">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    <tabBarItem key="tabBarItem" title="" image="ic_account_wallet" id="oLQ-yJ-t2U">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.95294117647058818" green="0.68627450980392157" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1188" y="-56"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="B8U-9E-uOn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VQK-AH-jmm" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VQK-AH-jmm" customClass="CustomTabBarController" customModule="IntroWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="uxa-40-JNl">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -128,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="250" y="-56"/>
         </scene>
-        <!--Cards-->
+        <!--View Controller-->
         <scene sceneID="PRM-gx-fmz">
             <objects>
                 <viewController id="gFJ-Ac-ELx" sceneMemberID="viewController">
@@ -141,8 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cards" image="ic_cards" id="oSw-fu-f2i">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    <tabBarItem key="tabBarItem" title="" image="ic_cards" id="oSw-fu-f2i">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="-457" y="1110"/>
         </scene>
-        <!--Pay someone-->
+        <!--View Controller-->
         <scene sceneID="1Jz-x0-pm1">
             <objects>
                 <viewController id="wJ8-zJ-rJQ" sceneMemberID="viewController">
@@ -167,8 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pay someone" image="ic_pay_someone" id="yW8-D0-SPW">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    <tabBarItem key="tabBarItem" title="" image="ic_pay_someone" id="yW8-D0-SPW">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -180,7 +177,7 @@
             </objects>
             <point key="canvasLocation" x="415" y="1110"/>
         </scene>
-        <!--BPAY-->
+        <!--View Controller-->
         <scene sceneID="zxB-9i-jG5">
             <objects>
                 <viewController id="kkV-M5-nzo" sceneMemberID="viewController">
@@ -193,8 +190,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="BPAY" image="ic_bpay" id="xRM-d2-nhF">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
+                    <tabBarItem key="tabBarItem" title="" image="ic_bpay" id="xRM-d2-nhF">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
