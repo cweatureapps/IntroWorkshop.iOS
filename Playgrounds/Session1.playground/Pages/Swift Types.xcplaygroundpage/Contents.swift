@@ -127,9 +127,6 @@ var dictionary1: [String: Int] = ["a": 1, "b": 2]
 var favouriteThings = ["cat": "wool", "dog": "bone"]
 
 
-
-
-
 //: ## Tuples
 
 let coordinate = (1,3)
@@ -146,20 +143,34 @@ let coordinate3: Coordinate = (x: 100, y: 300)
 
 
 
-
-
 /*:
 
 ## `Any` and `AnyObject`
 
 
 Swift provides two special type aliases for working with non-specific types:
-* AnyObject can represent an instance of any class type.
-* Any can represent an instance of any type at all, including function types.
+* `AnyObject` can represent an instance of any class type.
+* `Any` can represent an instance of any type at all, including function types.
 
 You'll most often encounter `AnyObject` during JSON parsing, and when interacting with older Objective-C APIs
 
+*/
+
+
+/*:
+
+ ## `NSObject`
+ 
+ `NSObject` is not a Swift type, but worth mentioning here.
+
+ Unlike C# and Java where there is a root `Object` type, in Swift, it is not necessary to derive from a class like this.
+ (Note in the above section, we said that `Any` and `AnyObject` are type aliases, i.e. they are not a superclass)
+
+ However, Objective-C has this concept, and `NSObject` is the root class of most Objective-C class hierarchies, and provides the basic interface that works with the Objective-C runtime. You'll still often use features from `NSObject` as part of working with tranditional APIs, such as those found in `UIKit`.
 
 */
+
+
+
 
 //: [Next](@next)

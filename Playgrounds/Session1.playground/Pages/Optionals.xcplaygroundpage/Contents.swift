@@ -31,7 +31,7 @@ foo!.isEmpty   // forced unwrapping. Will crash if it is actually nil.
 
 //: Bind the optional so that you can use it as a non-optional
 if let foo = foo {
-    foo.appending(" World")  //.stringByAppendingString(" World")
+    foo.appending(" World")
 } else {
     print("is nil")
 }
