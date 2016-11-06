@@ -169,7 +169,7 @@ let message = [
 
 func printErrorMessage1(json: [String: String]) {
     if json["errorMessage"] != nil {
-        print(json["errorMessage"])
+        print("not nil")
     }
 }
 
@@ -177,12 +177,12 @@ func printErrorMessage2(json: [String: String]) {
     if json["errorMessage"] == nil {
         return
     }
-    print(json["errorMessage"])
+    print("not nil")
 }
 
 func printErrorMessage3(json: [String: String]) {
     guard json["errorMessage"] != nil else { return }
-    print(json["errorMessage"])
+    print("not nil")
 }
 
 printErrorMessage3(json: message)

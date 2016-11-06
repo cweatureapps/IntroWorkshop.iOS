@@ -51,11 +51,11 @@ class MyView: UIView {
 
     var labelText2: String? {
         willSet {
-            print("about to set \(newValue)")
+            print("about to set \(newValue ?? "nil")")
         }
         didSet {
-            print("the previous value was \(oldValue)")
-            print("the new value is \(labelText2)")
+            print("the previous value was \(oldValue ?? "nil")")
+            print("the new value is \(labelText2 ?? "nil")")
             label.text = labelText2
         }
     }

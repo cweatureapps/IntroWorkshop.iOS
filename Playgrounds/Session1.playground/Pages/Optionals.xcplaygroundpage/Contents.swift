@@ -31,7 +31,7 @@ foo!.isEmpty   // forced unwrapping. Will crash if it is actually nil.
 
 //: Bind the optional so that you can use it as a non-optional
 if let foo = foo {
-    foo.appending(" World")  //.stringByAppendingString(" World")
+    foo.appending(" World")
 } else {
     print("is nil")
 }
@@ -42,7 +42,7 @@ let title: String? = "Title"
 let isLoaded: Bool? = false
 
 if let title = title, let loaded = isLoaded, !loaded {
-    //refresh the page.
+    print(title)
 }
 
 //: different ways of including a conditional
@@ -50,11 +50,12 @@ let condition = true
 
 if condition {
     if let title = title, let loaded = isLoaded {
-        
+        print(title)
+        print(loaded)
     }
 }
 if condition, let title = title, let loaded = isLoaded, !loaded {
-    
+    print(title)
 }
 
 
@@ -151,11 +152,12 @@ You'll often see this in JSON parsing
 */
 typealias JSON = [String: Any]
 let jsonString = "{ \"name\": \"Jemma Simmons\" }"
-let jsonData = jsonString.data(using: .utf8)
-let json: JSON = (try! JSONSerialization.jsonObject(with: jsonData!, options: [])) as! JSON
-if let name = json["name"] as? String {
-    print(name)
+if let jsonData = jsonString.data(using: .utf8),
+    let json: JSON = (try? JSONSerialization.jsonObject(with: jsonData, options: [])) as? JSON,
+    let name = json["name"] as? String {
+        print(name)
 }
+
 
 
 

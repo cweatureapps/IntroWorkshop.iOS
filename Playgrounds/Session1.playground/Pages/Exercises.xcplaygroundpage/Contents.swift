@@ -1,5 +1,7 @@
 //: [Previous](@previous)
 
+import Foundation
+
 /*:
 
 ### Homework Exercises
@@ -13,26 +15,10 @@ It is recommended that you follow a TDD approach.
 typealias JSON = [String: Any]
 ```
 
-2. Create an `Account` model object that represents one of the account objects from `GetAccounts.json`. Remember to also create a designated intializer which takes in every property to create the object.
-3. Implement a readonly property `maskedAccountNumber` that returns a `String` of the account number masked. E.g. "1234 5678 9012 3456" becomes "XXXX XXXX XXXX 3456".
-4. Create an initializer that takes the JSON dictionary and parses it into a single `Account` model object. Notice it is a failable initializer, which means it returns nil if it doesn't work.
- 
-```
-init?(json: JSON) {
-}
- 
-```
-
-5. Write a type method `Account.accountList(json:)` that parses the JSON dictionary and returns the array of `[Account]`.
-```
-static func accountList(json: JSON) -> [Account] {
-}
-
-```
-
-**Note:** 
-
-For this exercise, there is no need to read the JSON file. In your unit tests, just supply your test data directly as a dictionary. For example:
+2. Create an `Account` model object that represents one of the account objects from `GetAccounts.json`.
+3. Implement a readonly property `maskedAccountNumber` that returns a `String` of the account number masked. E.g. "1234 5678 9012 3456" becomes "XXXX XXXX XXXX 3456". Follow TDD and write the unit test for this first.
+4. Make the `Account` conform to `Codable` so that you can parse the JSON.
+5. Write a unit test that you can run to assert that the values can be parsed correctly. For example:
 
 ```
 let json: JSON = [
@@ -41,6 +27,11 @@ let json: JSON = [
     "availableFunds": 12.34,
     "accountBalance": 34.56
 ]
+let data = try JSONSerialization.data(withJSONObject: json, options: [])
+let account = try JSONDecoder().decode(Account.self, from: data)
+
+// TODO: assert that the account properties are correct
+
 ```
 
  
