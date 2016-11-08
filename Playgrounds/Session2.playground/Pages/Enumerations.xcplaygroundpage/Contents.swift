@@ -72,11 +72,11 @@ AnotherIntEnum.C.rawValue
 
 
 enum AnotherStringEnum: String {
-    case Apple, Banana , Carrot
+    case apple, banana , carrot
 }
-AnotherStringEnum.Apple.rawValue
-AnotherStringEnum.Banana.rawValue
-AnotherStringEnum.Carrot.rawValue
+AnotherStringEnum.apple.rawValue
+AnotherStringEnum.banana.rawValue
+AnotherStringEnum.carrot.rawValue
 
 
 /*:
@@ -111,18 +111,18 @@ case .failure:
 
 //: If you have multiple values, better to label them like a tuple
 enum Trade {
-    case Buy(stockCode: String, quantity: Int)
-    case Sell(stockCode: String, quantity: Int)
+    case buy(stockCode: String, quantity: Int)
+    case sell(stockCode: String, quantity: Int)
 }
 
-let trade1 = Trade.Buy(stockCode: "CBA", quantity: 50)
-let trade3 = Trade.Sell(stockCode: "ANZ", quantity: 40)
-let trade2 = Trade.Sell(stockCode: "WBC", quantity: 40)
+let trade1 = Trade.buy(stockCode: "CBA", quantity: 50)
+let trade3 = Trade.sell(stockCode: "ANZ", quantity: 40)
+let trade2 = Trade.sell(stockCode: "WBC", quantity: 40)
 
 switch trade1 {
-case .Buy(let stockCode, let quantity):    // this is how you access multiple associated values
+case .buy(let stockCode, let quantity):    // this is how you access multiple associated values
     print("buy \(stockCode) \(quantity)")
-case .Sell(let stockCode, let quantity):
+case .sell(let stockCode, let quantity):
     print("sell \(stockCode) \(quantity)")
 }
 
@@ -164,7 +164,7 @@ and has a property `symbol` which returns the symbol for the currency.
 
 
 enum Currency: String {
-    case AUD
+    case aud = "AUD"
     // FIXME: other cases
 
     // FIXME: `symbol` property

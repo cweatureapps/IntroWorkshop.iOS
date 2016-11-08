@@ -18,10 +18,11 @@ extension Int {
 3.isNegative
 (-3).isNegative
 
+
 /*:
 ### Exercise:
 
-1. add `square` and `squareRoot` properties to Double. (Hint: `sqrt()`)
+1. add `square` property to Double
 2. add a `plus` method to Double
 
 */
@@ -30,7 +31,6 @@ extension Int {
 
 // expected output
 
-//9.0.squareRoot  // 3
 //8.0.square      // 64
 //9.0.plus(4.0)   // 13
 
