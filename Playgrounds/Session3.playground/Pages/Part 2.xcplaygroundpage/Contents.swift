@@ -91,14 +91,7 @@ In views, we often try to encapsulate the internal implementation, and just expo
     }
 
  Do this for all 4 labels, and then you can make the `IBOutlet` properties `private`.
- 
 
-Finally, for the view controller, create an `IBOutlet` for the `AccountDetailsView` by ctrl-dragging.
-
-Then fix up your code so that it compiles. When the service returns, it will set the values into the AccountDetailsView.
- 
-    this.accountDetailsView.accountName = account.accountName
-    // etc...
 
  
 ## Wire up the outlets
@@ -123,6 +116,15 @@ Then select the view from the view hierarchy, and specify the AccountDetailsView
 
 ![accountdetails.class](accountdetails.class.png "accountdetails.class")
 
+ 
+Finally, for the view controller, create an `IBOutlet` for the `AccountDetailsView` by ctrl-dragging.
+
+Then fix up your code so that it compiles. When the service returns, it will set the values into the AccountDetailsView.
+ 
+    this.accountDetailsView.accountName = account.accountName
+    // etc...
+ 
+ 
  
 ## All done!
  
