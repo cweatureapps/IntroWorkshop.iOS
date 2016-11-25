@@ -76,25 +76,27 @@ When the table is rendered, we'll be able to get a reference to the prototype ce
     extension AccountsViewController: UITableViewDataSource {
 
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return accounts?.count ?? 0;
+            return accounts?.count ?? 0
         }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let accounts = accounts where accounts.count > indexPath.row else {
+            guard let accounts = accounts, accounts.count > indexPath.row else {
                 return UITableViewCell()
             }
             let account = accounts[indexPath.row]
-            let cell = tableView.dequeueReusableCellWithIdentifier("accountDetailsCell", forIndexPath: indexPath) as! AccountDetailsViewCell
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: "accountDetailsCell", for: indexPath) as! AccountDetailsViewCell
 
             // FIXME: the code you commented out earlier, move the code to here and fix it up
 
+            cell.selectionStyle = .none
             return cell
         }
     }
 
     extension AccountsViewController: UITableViewDelegate {
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 136.0
+            return 136
         }
     }
 
