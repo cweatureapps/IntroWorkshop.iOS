@@ -58,6 +58,17 @@ class AccountsViewController: UIViewController {
         backgroundImageView.image = blurImage
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  let identifier = segue.identifier, identifier == "transactionsSegue",
+            let destinationViewController = segue.destination as? TransactionsViewController {
+
+            guard let accounts = accounts,
+                let cell = sender as? UITableViewCell,
+                let row = tableView.indexPath(for: cell)?.row, row < accounts.count else { return }
+            destinationViewController.account = accounts[row]
+        }
+    }
+
 }
 
 extension AccountsViewController: UITableViewDataSource {

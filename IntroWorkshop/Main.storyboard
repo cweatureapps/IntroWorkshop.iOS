@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VQK-AH-jmm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VQK-AH-jmm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,18 +20,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_sunset" translatesAutoresizingMaskIntoConstraints="NO" id="QWt-YI-FYr"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_sunset" translatesAutoresizingMaskIntoConstraints="NO" id="QWt-YI-FYr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pP-UZ-gq1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountDetailsCell" rowHeight="136" id="d1F-K5-C3r" customClass="AccountDetailsViewCell" customModule="IntroWorkshop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d1F-K5-C3r" id="4uY-yN-bFJ">
-                                            <frame key="frameInset" width="375" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-nv-Q9B" customClass="AccountDetailsView" customModule="IntroWorkshop" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="120"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
@@ -42,6 +49,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="accountDetailsView" destination="jcy-nv-Q9B" id="XXp-6o-L1Q"/>
+                                            <segue destination="BIy-ki-dVj" kind="show" identifier="transactionsSegue" id="Y8k-yp-v17"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -64,6 +72,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9uD-kE-iIZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="GNT-yc-FJe"/>
                         <barButtonItem key="leftBarButtonItem" image="ic_hamburger" id="DZJ-kJ-EzS">
                             <color key="tintColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -79,6 +88,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2158" y="-56"/>
+        </scene>
+        <!--Transactions View Controller-->
+        <scene sceneID="HiJ-9U-PQj">
+            <objects>
+                <viewController id="BIy-ki-dVj" customClass="TransactionsViewController" customModule="IntroWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5iV-v5-3UQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="En3-AM-hjl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ttk-PN-HbG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_sunset" translatesAutoresizingMaskIntoConstraints="NO" id="jU3-vr-Rkb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KGQ-8Z-7vp">
+                                <rect key="frame" x="8" y="0.0" width="359" height="618"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="4tv-NC-MgG" userLabel="TableHeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="136"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RV-Mg-3DM" customClass="AccountDetailsView" customModule="IntroWorkshop" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="120"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4RV-Mg-3DM" secondAttribute="trailing" id="0P4-bV-AlV"/>
+                                        <constraint firstAttribute="bottom" secondItem="4RV-Mg-3DM" secondAttribute="bottom" constant="16" id="4Rb-cy-Rvt"/>
+                                        <constraint firstItem="4RV-Mg-3DM" firstAttribute="leading" secondItem="4tv-NC-MgG" secondAttribute="leading" id="erH-Wj-z7D"/>
+                                        <constraint firstItem="4RV-Mg-3DM" firstAttribute="top" secondItem="4tv-NC-MgG" secondAttribute="top" id="w3r-YC-Au1"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="75Z-Ma-BkF" userLabel="TableFooterView">
+                                    <rect key="frame" x="0.0" y="208" width="359" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1J0-0f-wQC">
+                                        <rect key="frame" x="0.0" y="164" width="359" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1J0-0f-wQC" id="mEm-d3-9ad">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jU3-vr-Rkb" firstAttribute="centerY" secondItem="ttk-PN-HbG" secondAttribute="centerY" id="5EP-ej-5zc"/>
+                            <constraint firstItem="jU3-vr-Rkb" firstAttribute="height" secondItem="ttk-PN-HbG" secondAttribute="height" id="5o0-qj-KWE"/>
+                            <constraint firstItem="KGQ-8Z-7vp" firstAttribute="top" secondItem="ttk-PN-HbG" secondAttribute="top" id="7zP-pE-ewD"/>
+                            <constraint firstItem="KGQ-8Z-7vp" firstAttribute="leading" secondItem="ttk-PN-HbG" secondAttribute="leading" constant="8" id="85e-j0-gKx"/>
+                            <constraint firstItem="jU3-vr-Rkb" firstAttribute="centerX" secondItem="ttk-PN-HbG" secondAttribute="centerX" id="Inh-gC-hQl"/>
+                            <constraint firstItem="jU3-vr-Rkb" firstAttribute="width" secondItem="ttk-PN-HbG" secondAttribute="width" id="Ka5-6V-YZW"/>
+                            <constraint firstItem="En3-AM-hjl" firstAttribute="top" secondItem="KGQ-8Z-7vp" secondAttribute="bottom" id="Lvj-NM-LCS"/>
+                            <constraint firstAttribute="trailing" secondItem="KGQ-8Z-7vp" secondAttribute="trailing" constant="8" id="ekk-c4-R44"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountDetailsView" destination="4RV-Mg-3DM" id="IxW-zL-3xl"/>
+                        <outlet property="backgroundImageView" destination="jU3-vr-Rkb" id="ir4-SN-HWj"/>
+                        <outlet property="tableView" destination="KGQ-8Z-7vp" id="YSn-Gi-BtW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6J0-Re-pMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905" y="-56"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="roM-wz-Aqn">

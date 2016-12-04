@@ -38,6 +38,7 @@
 		5BCF7C091D9545C300D18FE5 /* GetAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BD1C3294E200C901FC /* GetAccounts.json */; };
 		5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF7C0A1D955B2600D18FE5 /* Result.swift */; };
 		5BE89E761D3BC305006BA2FD /* AccountsManager+Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE89E751D3BC305006BA2FD /* AccountsManager+Transactions.swift */; };
+		5BEFC9E01DF413C0006C1206 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFC9DF1DF413C0006C1206 /* TransactionsViewController.swift */; };
 		D0FE04E3FFD4064977AF0758 /* Pods_IntroWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AFD6CF375E3CAD9E2BF3AE /* Pods_IntroWorkshop.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		5BCF7C051D95421E00D18FE5 /* ServiceURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceURLs.swift; sourceTree = "<group>"; };
 		5BCF7C0A1D955B2600D18FE5 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5BE89E751D3BC305006BA2FD /* AccountsManager+Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountsManager+Transactions.swift"; sourceTree = "<group>"; };
+		5BEFC9DF1DF413C0006C1206 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		ABD7A765E902FA8AD6FCAAA3 /* Pods-IntroWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
 		E6AFD6CF375E3CAD9E2BF3AE /* Pods_IntroWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntroWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 				5B926E011D23A43400458C4E /* AccountsViewController.swift */,
 				5B9B11EB1D2C0A9D00463160 /* FirstViewController.swift */,
 				5B9B11EC1D2C0A9D00463160 /* SecondViewController.swift */,
+				5BEFC9DF1DF413C0006C1206 /* TransactionsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				5B95813D1D26729F00E58117 /* UIImageEffects.m in Sources */,
 				5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */,
 				5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */,
+				5BEFC9E01DF413C0006C1206 /* TransactionsViewController.swift in Sources */,
 				5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */,
 				5B44D4751D248B2A003D63B6 /* AccountDetailsViewCell.swift in Sources */,
 				5B8394B11D94B0FA007560CF /* ServiceHelper.swift in Sources */,
