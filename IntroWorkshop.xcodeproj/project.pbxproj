@@ -39,6 +39,8 @@
 		5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF7C0A1D955B2600D18FE5 /* Result.swift */; };
 		5BE89E761D3BC305006BA2FD /* AccountsManager+Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE89E751D3BC305006BA2FD /* AccountsManager+Transactions.swift */; };
 		5BEFC9E01DF413C0006C1206 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFC9DF1DF413C0006C1206 /* TransactionsViewController.swift */; };
+		5BEFC9E31DF42495006C1206 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFC9E11DF42495006C1206 /* TransactionCell.swift */; };
+		5BEFC9E41DF42495006C1206 /* TransactionSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFC9E21DF42495006C1206 /* TransactionSectionHeaderCell.swift */; };
 		D0FE04E3FFD4064977AF0758 /* Pods_IntroWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AFD6CF375E3CAD9E2BF3AE /* Pods_IntroWorkshop.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		5BCF7C0A1D955B2600D18FE5 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5BE89E751D3BC305006BA2FD /* AccountsManager+Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccountsManager+Transactions.swift"; sourceTree = "<group>"; };
 		5BEFC9DF1DF413C0006C1206 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		5BEFC9E11DF42495006C1206 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		5BEFC9E21DF42495006C1206 /* TransactionSectionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionSectionHeaderCell.swift; sourceTree = "<group>"; };
 		ABD7A765E902FA8AD6FCAAA3 /* Pods-IntroWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
 		E6AFD6CF375E3CAD9E2BF3AE /* Pods_IntroWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntroWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -227,6 +231,8 @@
 				5B926E051D23E8F400458C4E /* AccountDetailsView.xib */,
 				5B44D4741D248B2A003D63B6 /* AccountDetailsViewCell.swift */,
 				5B926DFD1D23989700458C4E /* NibDesignableView.swift */,
+				5BEFC9E11DF42495006C1206 /* TransactionCell.swift */,
+				5BEFC9E21DF42495006C1206 /* TransactionSectionHeaderCell.swift */,
 				5B95813B1D26729F00E58117 /* UIImageEffects.h */,
 				5B95813C1D26729F00E58117 /* UIImageEffects.m */,
 				5B926DFE1D23989700458C4E /* UIView+ViewFromNib.swift */,
@@ -414,6 +420,7 @@
 				5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */,
 				5B926DFF1D23989700458C4E /* NibDesignableView.swift in Sources */,
 				5B95813D1D26729F00E58117 /* UIImageEffects.m in Sources */,
+				5BEFC9E31DF42495006C1206 /* TransactionCell.swift in Sources */,
 				5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */,
 				5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */,
 				5BEFC9E01DF413C0006C1206 /* TransactionsViewController.swift in Sources */,
@@ -423,6 +430,7 @@
 				5BCF7C061D95421E00D18FE5 /* ServiceURLs.swift in Sources */,
 				5BE89E761D3BC305006BA2FD /* AccountsManager+Transactions.swift in Sources */,
 				5B63DDA01D3B43D200B01A96 /* Transaction.swift in Sources */,
+				5BEFC9E41DF42495006C1206 /* TransactionSectionHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
