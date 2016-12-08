@@ -103,6 +103,17 @@ extension AccountsViewController: UITableViewDelegate {
 
 extension AccountsViewController: AccountDetailsViewDelegate {
     func accountNumberLabelTapped(accountNumber: String) {
+        // copyToPasteboardAlert(accountNumber: accountNumber)
+        showShareSheet(accountNumber: accountNumber)
+    }
+
+    private func showShareSheet(accountNumber: String) {
+        let activityViewController = UIActivityViewController(activityItems: [accountNumber], applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [.airDrop]
+        present(activityViewController, animated: true, completion: nil)
+    }
+
+    private func copyToPasteboardAlert(accountNumber: String) {
         let alertController = UIAlertController(title: "", message: "Copy \"\(accountNumber)\" to pasteboard?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             UIPasteboard.general.string = accountNumber
