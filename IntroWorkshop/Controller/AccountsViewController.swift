@@ -103,7 +103,13 @@ extension AccountsViewController: UITableViewDelegate {
 
 extension AccountsViewController: AccountDetailsViewDelegate {
     func accountNumberLabelTapped(accountNumber: String) {
-        UIPasteboard.general.string = accountNumber
-        print("Copied to pasteboard")
+        let alertController = UIAlertController(title: "", message: "Copy \"\(accountNumber)\" to pasteboard?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            UIPasteboard.general.string = accountNumber
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
