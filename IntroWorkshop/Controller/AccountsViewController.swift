@@ -90,6 +90,7 @@ extension AccountsViewController: UITableViewDataSource {
             cell.accountDetailsView.accountBalance = account.formattedAccountBalance
 
             cell.selectionStyle = .none
+            cell.accountDetailsView.delegate = self
         return cell
     }
 }
@@ -97,5 +98,12 @@ extension AccountsViewController: UITableViewDataSource {
 extension AccountsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+}
+
+extension AccountsViewController: AccountDetailsViewDelegate {
+    func accountNumberLabelTapped(accountNumber: String) {
+        UIPasteboard.general.string = accountNumber
+        print("Copied to pasteboard")
     }
 }

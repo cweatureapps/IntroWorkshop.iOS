@@ -16,6 +16,8 @@ class AccountDetailsView: NibDesignableView {
     @IBOutlet private weak var availableFundsLabel: UILabel!
     @IBOutlet private weak var accountBalanceLabel: UILabel!
 
+    weak var delegate: AccountDetailsViewDelegate?
+    
     @IBInspectable
     var accountName: String? {
         didSet {
@@ -61,10 +63,9 @@ class AccountDetailsView: NibDesignableView {
     }
 
     @IBAction func tapGestureRecognizerTapped(_ sender: Any) {
-        UIPasteboard.general.string = accountNumberLabel.text
-        print("Copied to pasteboard")
+        delegate?.accountNumberLabelTapped(accountNumber: accountNumberLabel.text ?? "")
     }
-
+    
     // MARK - Designer support
 
     override var designerView: UIView? {
@@ -86,4 +87,8 @@ class AccountDetailsView: NibDesignableView {
         availableFundsLabel.text = "[$0,000.00]"
         accountBalanceLabel.text = "[$0,000.00]"
     }
+}
+
+protocol AccountDetailsViewDelegate: class {
+    func accountNumberLabelTapped(accountNumber: String)
 }
