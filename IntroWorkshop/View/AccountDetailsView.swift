@@ -60,6 +60,11 @@ class AccountDetailsView: NibDesignableView {
         }
     }
 
+    @IBAction func tapGestureRecognizerTapped(_ sender: Any) {
+        UIPasteboard.general.string = accountNumberLabel.text
+        print("Copied to pasteboard")
+    }
+
     // MARK - Designer support
 
     override var designerView: UIView? {
