@@ -16,6 +16,7 @@
 		5B3CAD301C14E95C005568DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */; };
 		5B44D4751D248B2A003D63B6 /* AccountDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D4741D248B2A003D63B6 /* AccountDetailsViewCell.swift */; };
 		5B5C29091DFBBDEE00481013 /* ScrollViewDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5C29081DFBBDEE00481013 /* ScrollViewDemo.storyboard */; };
+		5B5C290B1DFBC04600481013 /* TextFieldDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C290A1DFBC04600481013 /* TextFieldDemoViewController.swift */; };
 		5B63DDA01D3B43D200B01A96 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63DD9C1D3B43D200B01A96 /* Transaction.swift */; };
 		5B63DDA11D3B43D200B01A96 /* AccountsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63DD9D1D3B43D200B01A96 /* AccountsManager.swift */; };
 		5B63DDA21D3B43D200B01A96 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63DD9E1D3B43D200B01A96 /* TransactionService.swift */; };
@@ -73,6 +74,7 @@
 		5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5B44D4741D248B2A003D63B6 /* AccountDetailsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewCell.swift; sourceTree = "<group>"; };
 		5B5C29081DFBBDEE00481013 /* ScrollViewDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScrollViewDemo.storyboard; sourceTree = "<group>"; };
+		5B5C290A1DFBC04600481013 /* TextFieldDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDemoViewController.swift; sourceTree = "<group>"; };
 		5B63DD9C1D3B43D200B01A96 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		5B63DD9D1D3B43D200B01A96 /* AccountsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsManager.swift; sourceTree = "<group>"; };
 		5B63DD9E1D3B43D200B01A96 /* TransactionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				5B926E011D23A43400458C4E /* AccountsViewController.swift */,
 				5B9B11EB1D2C0A9D00463160 /* FirstViewController.swift */,
 				5B9B11EC1D2C0A9D00463160 /* SecondViewController.swift */,
+				5B5C290A1DFBC04600481013 /* TextFieldDemoViewController.swift */,
 				5BEFC9DF1DF413C0006C1206 /* TransactionsViewController.swift */,
 			);
 			path = Controller;
@@ -435,6 +438,7 @@
 				5BEFC9E31DF42495006C1206 /* TransactionCell.swift in Sources */,
 				5B8394B01D94B0FA007560CF /* AccountService.swift in Sources */,
 				5BCF7C0B1D955B2600D18FE5 /* Result.swift in Sources */,
+				5B5C290B1DFBC04600481013 /* TextFieldDemoViewController.swift in Sources */,
 				5BEFC9E01DF413C0006C1206 /* TransactionsViewController.swift in Sources */,
 				5B93DD631D9002FD000BCE40 /* JSON.swift in Sources */,
 				5B44D4751D248B2A003D63B6 /* AccountDetailsViewCell.swift in Sources */,

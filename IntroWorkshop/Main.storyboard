@@ -306,7 +306,7 @@
                         <segue destination="cTI-Eu-qdV" kind="relationship" relationship="viewControllers" id="bn2-ei-byx"/>
                         <segue destination="bDR-Y4-SEZ" kind="relationship" relationship="viewControllers" id="He6-2p-UAp"/>
                         <segue destination="IrS-Sb-7Jb" kind="relationship" relationship="viewControllers" id="gv3-bg-QXt"/>
-                        <segue destination="kkV-M5-nzo" kind="relationship" relationship="viewControllers" id="OTE-F4-6HX"/>
+                        <segue destination="4NP-UH-wKE" kind="relationship" relationship="viewControllers" id="vTI-5x-mq0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzk-4z-rge" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,30 +334,70 @@
             <point key="canvasLocation" x="-166" y="661"/>
         </scene>
         <!--BPAY-->
-        <scene sceneID="zxB-9i-jG5">
+        <scene sceneID="jln-30-cVi">
             <objects>
-                <viewController id="kkV-M5-nzo" sceneMemberID="viewController">
+                <viewController id="4NP-UH-wKE" customClass="TextFieldDemoViewController" customModule="IntroWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9rR-Wr-KUb"/>
-                        <viewControllerLayoutGuide type="bottom" id="dHz-2M-a04"/>
+                        <viewControllerLayoutGuide type="top" id="n4c-6a-XbM"/>
+                        <viewControllerLayoutGuide type="bottom" id="zPs-Qr-IEc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Iy7-MT-GPl">
+                    <view key="view" contentMode="scaleToFill" id="c6T-Tr-CBD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H84-oe-N1g">
+                                <rect key="frame" x="127.5" y="122" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4NP-UH-wKE" id="psy-fh-5KW"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Scm-SF-HIm">
+                                <rect key="frame" x="127.5" y="84" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Vbq-Qi-YZJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4NP-UH-wKE" id="v4j-Ie-bJg"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Scm-SF-HIm" firstAttribute="centerX" secondItem="c6T-Tr-CBD" secondAttribute="centerX" id="9Qv-R8-kpo"/>
+                            <constraint firstItem="H84-oe-N1g" firstAttribute="width" secondItem="Scm-SF-HIm" secondAttribute="width" id="MZb-zR-6za"/>
+                            <constraint firstItem="H84-oe-N1g" firstAttribute="centerX" secondItem="c6T-Tr-CBD" secondAttribute="centerX" id="aF1-R1-Xf3"/>
+                            <constraint firstItem="H84-oe-N1g" firstAttribute="top" secondItem="Scm-SF-HIm" secondAttribute="bottom" constant="8" id="pcn-t1-y4L"/>
+                            <constraint firstItem="Scm-SF-HIm" firstAttribute="top" secondItem="n4c-6a-XbM" secondAttribute="bottom" constant="64" id="swF-cP-yrM"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zwM-07-g0b" appends="YES" id="KdZ-mi-0S5"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="BPAY" image="ic_bpay" id="xRM-d2-nhF">
+                    <tabBarItem key="tabBarItem" title="BPAY" image="ic_bpay" id="sVy-Wi-cGu">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="amountTextField" destination="H84-oe-N1g" id="vrd-uy-ZmC"/>
+                        <outlet property="descriptionTextField" destination="Scm-SF-HIm" id="D9E-gm-mW2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XYF-7G-wr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFg-Qg-hIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zwM-07-g0b">
+                    <connections>
+                        <action selector="viewTappedWithSender:" destination="4NP-UH-wKE" id="smc-al-Cfs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="770" y="977"/>
+            <point key="canvasLocation" x="876" y="948"/>
         </scene>
     </scenes>
     <resources>
