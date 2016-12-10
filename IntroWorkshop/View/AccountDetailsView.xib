@@ -1,50 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHr-83-w6d" customClass="AccountDetailsView" customModule="IntroWorkshop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
             <subviews>
                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5r-Ed-9cX" userLabel="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_wallet_medium" translatesAutoresizingMaskIntoConstraints="NO" id="CR6-7R-rTP" userLabel="icon">
+                    <rect key="frame" x="8" y="16" width="36" height="36"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                             <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="100" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="[account name]" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6A-HX-Owj">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" text="[account name]" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6A-HX-Owj">
+                    <rect key="frame" x="52" y="12" width="315" height="37"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[account number]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSt-cK-q54">
+                    <rect key="frame" x="54" y="49" width="108.5" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available funds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgG-20-DPc">
+                    <rect key="frame" x="54" y="78" width="91.5" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcT-Pv-vwd">
+                    <rect key="frame" x="54" y="96" width="101" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0,000.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-hS-gsZ">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$0,000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-hS-gsZ">
+                    <rect key="frame" x="153.5" y="78" width="205.5" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0,000.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGj-8t-xdj">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$0,000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGj-8t-xdj">
+                    <rect key="frame" x="163" y="96" width="196" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -62,6 +74,7 @@
                 <constraint firstItem="CR6-7R-rTP" firstAttribute="leading" secondItem="gHr-83-w6d" secondAttribute="leading" constant="8" id="OW8-Py-KZF"/>
                 <constraint firstItem="SSt-cK-q54" firstAttribute="top" secondItem="Z6A-HX-Owj" secondAttribute="bottom" id="Sez-6x-WvX"/>
                 <constraint firstAttribute="bottom" secondItem="UcT-Pv-vwd" secondAttribute="bottom" constant="16" id="UaS-VB-QXQ"/>
+                <constraint firstItem="iZJ-hS-gsZ" firstAttribute="leading" secondItem="mgG-20-DPc" secondAttribute="trailing" constant="8" id="UuI-Ke-JsZ"/>
                 <constraint firstItem="Z6A-HX-Owj" firstAttribute="leading" secondItem="CR6-7R-rTP" secondAttribute="trailing" constant="8" id="YhF-cs-TXd"/>
                 <constraint firstAttribute="bottom" secondItem="Y5r-Ed-9cX" secondAttribute="bottom" id="cca-MK-nDR"/>
                 <constraint firstAttribute="trailing" secondItem="AGj-8t-xdj" secondAttribute="trailing" constant="16" id="djB-Y7-qa0"/>
@@ -70,6 +83,7 @@
                 <constraint firstAttribute="trailing" secondItem="iZJ-hS-gsZ" secondAttribute="trailing" constant="16" id="evE-2e-Gax"/>
                 <constraint firstItem="Z6A-HX-Owj" firstAttribute="top" secondItem="gHr-83-w6d" secondAttribute="top" constant="12" id="iKY-sj-SNU"/>
                 <constraint firstItem="mgG-20-DPc" firstAttribute="baseline" secondItem="iZJ-hS-gsZ" secondAttribute="baseline" id="rNY-hx-FBv"/>
+                <constraint firstItem="AGj-8t-xdj" firstAttribute="leading" secondItem="UcT-Pv-vwd" secondAttribute="trailing" constant="8" id="voy-fO-BQy"/>
                 <constraint firstItem="mgG-20-DPc" firstAttribute="top" secondItem="SSt-cK-q54" secondAttribute="bottom" constant="13" id="wVM-6p-CJr"/>
                 <constraint firstItem="Y5r-Ed-9cX" firstAttribute="top" secondItem="gHr-83-w6d" secondAttribute="top" id="zd5-nl-9Hb"/>
             </constraints>
@@ -81,7 +95,7 @@
                 <outlet property="accountNumberLabel" destination="SSt-cK-q54" id="tYH-ar-aUg"/>
                 <outlet property="availableFundsLabel" destination="iZJ-hS-gsZ" id="Lh2-pG-lxf"/>
             </connections>
-            <point key="canvasLocation" x="-158" y="-937"/>
+            <point key="canvasLocation" x="-463" y="-1462"/>
         </view>
     </objects>
     <resources>
