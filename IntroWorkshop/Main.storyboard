@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2158" y="-56"/>
+            <point key="canvasLocation" x="2078" y="-56"/>
         </scene>
         <!--Transactions View Controller-->
         <scene sceneID="HiJ-9U-PQj">
@@ -277,7 +277,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lYm-LR-e9o">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lYm-LR-e9o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
@@ -289,7 +289,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRD-1C-czY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1353" y="-56"/>
+            <point key="canvasLocation" x="1161" y="-56"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B8U-9E-uOn">
@@ -305,13 +305,23 @@
                     <connections>
                         <segue destination="cTI-Eu-qdV" kind="relationship" relationship="viewControllers" id="bn2-ei-byx"/>
                         <segue destination="bDR-Y4-SEZ" kind="relationship" relationship="viewControllers" id="He6-2p-UAp"/>
-                        <segue destination="wJ8-zJ-rJQ" kind="relationship" relationship="viewControllers" id="i2v-we-g0p"/>
+                        <segue destination="IrS-Sb-7Jb" kind="relationship" relationship="viewControllers" id="gv3-bg-QXt"/>
                         <segue destination="kkV-M5-nzo" kind="relationship" relationship="viewControllers" id="OTE-F4-6HX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzk-4z-rge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="250" y="-56"/>
+        </scene>
+        <!--ScrollViewDemo-->
+        <scene sceneID="tXS-kc-NO5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScrollViewDemo" id="IrS-Sb-7Jb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pay someon" image="ic_pay_someone" id="3XK-Nd-y6T"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9E-46-TEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="661"/>
         </scene>
         <!--NavigationDemo-->
         <scene sceneID="RlQ-22-U0N">
@@ -321,33 +331,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOe-EZ-IJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674.5" y="840"/>
-        </scene>
-        <!--Pay someone-->
-        <scene sceneID="1Jz-x0-pm1">
-            <objects>
-                <viewController id="wJ8-zJ-rJQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GDc-4q-IAR"/>
-                        <viewControllerLayoutGuide type="bottom" id="RXr-EY-3wW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8iu-Qg-JyG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Pay someone" image="ic_pay_someone" id="yW8-D0-SPW">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sox-bn-0rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="415" y="1110"/>
+            <point key="canvasLocation" x="-166" y="661"/>
         </scene>
         <!--BPAY-->
         <scene sceneID="zxB-9i-jG5">
@@ -373,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYF-7G-wr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="1110"/>
+            <point key="canvasLocation" x="770" y="977"/>
         </scene>
     </scenes>
     <resources>

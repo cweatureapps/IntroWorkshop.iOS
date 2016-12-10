@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fja-SD-67P">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pay someone-->
+        <scene sceneID="XXs-dg-rdP">
+            <objects>
+                <viewController id="fja-SD-67P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P5d-gz-F58"/>
+                        <viewControllerLayoutGuide type="bottom" id="leZ-OB-8bj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FQI-gY-7No">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJp-75-IdC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDj-Ln-aBM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="496"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-2y-uTN">
+                                                <rect key="frame" x="67.5" y="264" width="240" height="200"/>
+                                                <color key="backgroundColor" red="0.5725490196078431" green="0.81568627450980391" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="Nl4-5p-7SO"/>
+                                                    <constraint firstAttribute="width" constant="240" id="fa4-uC-35i"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yy6-79-0Sm">
+                                                <rect key="frame" x="67.5" y="32" width="240" height="200"/>
+                                                <color key="backgroundColor" red="1" green="0.31903458870000001" blue="0.15157960540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240" id="7Im-HO-jCh"/>
+                                                    <constraint firstAttribute="height" constant="200" id="DW7-yn-AII"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="XNx-2y-uTN" firstAttribute="centerX" secondItem="tDj-Ln-aBM" secondAttribute="centerX" id="J2h-ft-Gum"/>
+                                            <constraint firstItem="XNx-2y-uTN" firstAttribute="top" secondItem="Yy6-79-0Sm" secondAttribute="bottom" constant="32" id="dl6-wB-b98"/>
+                                            <constraint firstAttribute="bottom" secondItem="XNx-2y-uTN" secondAttribute="bottom" constant="32" id="hfR-iM-Ces"/>
+                                            <constraint firstItem="Yy6-79-0Sm" firstAttribute="centerX" secondItem="tDj-Ln-aBM" secondAttribute="centerX" id="hyS-1L-Plr"/>
+                                            <constraint firstItem="Yy6-79-0Sm" firstAttribute="top" secondItem="tDj-Ln-aBM" secondAttribute="top" constant="32" id="lrN-ls-4aM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tDj-Ln-aBM" firstAttribute="top" secondItem="pJp-75-IdC" secondAttribute="top" id="AoZ-fg-jRD"/>
+                                    <constraint firstItem="tDj-Ln-aBM" firstAttribute="leading" secondItem="pJp-75-IdC" secondAttribute="leading" id="DsP-kD-m5r"/>
+                                    <constraint firstAttribute="bottom" secondItem="tDj-Ln-aBM" secondAttribute="bottom" id="TdG-dj-iwj"/>
+                                    <constraint firstAttribute="trailing" secondItem="tDj-Ln-aBM" secondAttribute="trailing" id="zSH-Ir-Eu7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="contentInset">
+                                        <rect key="value" x="20" y="0.0" width="49" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pJp-75-IdC" firstAttribute="centerX" secondItem="FQI-gY-7No" secondAttribute="centerX" id="5Gp-uo-W9X"/>
+                            <constraint firstItem="pJp-75-IdC" firstAttribute="width" secondItem="FQI-gY-7No" secondAttribute="width" id="5Nl-2o-7Eh"/>
+                            <constraint firstItem="pJp-75-IdC" firstAttribute="centerY" secondItem="FQI-gY-7No" secondAttribute="centerY" id="EGg-v9-DWe"/>
+                            <constraint firstItem="tDj-Ln-aBM" firstAttribute="width" secondItem="FQI-gY-7No" secondAttribute="width" id="RuQ-Hr-X9U"/>
+                            <constraint firstItem="pJp-75-IdC" firstAttribute="height" secondItem="FQI-gY-7No" secondAttribute="height" id="hZr-yT-tk2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pay someone" image="ic_pay_someone" id="hbE-j6-gW0">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.95294117649999999" green="0.68627450980000004" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKV-Pu-fke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="295"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_pay_someone" width="24" height="24"/>
+    </resources>
+</document>
