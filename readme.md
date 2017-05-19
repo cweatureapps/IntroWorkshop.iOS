@@ -143,3 +143,6 @@ Transactions Listing - Diving deeper into dynamic tableviews
 
 
 
+## License
+
+The material contained in this IntroWorkshop.iOS repository is available under the MIT license. See the LICENSE file for more info.

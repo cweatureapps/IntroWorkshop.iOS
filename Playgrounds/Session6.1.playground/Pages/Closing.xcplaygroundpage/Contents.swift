@@ -4,9 +4,9 @@
 
 # Where to go from here
  
-## Developing iOS 9 Apps with Swift (Stanford)
+## Developing iOS 10 Apps with Swift (Stanford)
  
- Link: [Developing iOS 9 Apps with Swift](https://itunes.apple.com/au/course/developing-ios-9-apps-swift/id1104579961)
+ Link: [Developing iOS 10 Apps with Swift](https://itunes.apple.com/us/course/developing-ios-10-apps-with-swift/id1198467120)
  
  This is the best iOS course out there, and how I originally learned iOS myself.
  Paul Hegarty is an amazing lecturer, and he updates the course every year for the latest version of iOS and Swift.
