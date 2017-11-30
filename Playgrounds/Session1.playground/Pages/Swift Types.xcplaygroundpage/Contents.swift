@@ -24,6 +24,34 @@ let width: CGFloat = 16
 let frame = CGRect(x: 10, y: 10, width: width, height: 10)
 let view = UIView(frame: frame)
 
+//: For financial calcuations, use `Decimal` type to avoid floating point errors.
+
+// Double will have floating point error
+1.0 - 0.9 - 0.1 // -2.775557561562891e-17
+
+// Decimal will give exact value
+let decimal1 = Decimal(string: "1.0")!
+let decimal2 = Decimal(string: "0.9")!
+let decimal3 = Decimal(string: "0.1")!
+let decimalAnswer = decimal1 - decimal2 - decimal3
+
+
+//: ## Ranges
+
+//: Ranges are used to represent an interval of values.
+
+// Closed range
+1...3 // 1,2,3
+
+// Half open range (excludes the upper bound)
+1..<3  // 1,2
+
+// One sided range
+..<2   // less than 2 (not including 2)
+...2   // less than or equal to 2
+2...   // more than 2
+
+
 //: ## Strings
 
 let message = "Hello World"
@@ -60,16 +88,14 @@ word += "\u{301}"
 word.count
 word.utf16.count
 
-//: **Substring and ranges**
-
+//: **Substring**
 
 let index = message.index(message.startIndex, offsetBy: 6)
 message[index...]
 
 let endIndex = message.index(message.startIndex, offsetBy: 5)
-message[message.startIndex..<endIndex]
+message[..<endIndex]
 
-let fullRange = message.startIndex..<message.endIndex
 
 //: **Other useful functions**
 
@@ -82,6 +108,15 @@ let fullRange = message.startIndex..<message.endIndex
 // replace
 "123 456 789".replacingOccurrences(of: " ", with: "_")
 
+//: **Multiline Strings**
+
+let verse = """
+    To be, or not to be - that is the question;
+    Whether 'tis nobler in the mind to suffer
+    The slings and arrows of outrageous fortune,
+    Or to take arms against a sea of troubles,
+    """
+print(verse)
 
 
 /*:
@@ -119,6 +154,8 @@ animals.count
 animals + ["cat"]  // + operator creates a new array
 animals
 
+// slicing using range
+animals[1...]
 
 
 //: ### Dictionary

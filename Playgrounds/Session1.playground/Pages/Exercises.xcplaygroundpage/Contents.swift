@@ -15,7 +15,7 @@ It is recommended that you follow a TDD approach.
 typealias JSON = [String: Any]
 ```
 
-2. Create an `Account` model object that represents one of the account objects from `GetAccounts.json`.
+2. Create an `Account` model object that represents one of the account objects from `GetAccounts.json`. (Don't worry about the array, just model a single account first).
 3. Implement a readonly property `maskedAccountNumber` that returns a `String` of the account number masked. E.g. "1234 5678 9012 3456" becomes "XXXX XXXX XXXX 3456". Follow TDD and write the unit test for this first.
 4. Make the `Account` conform to `Codable` so that you can parse the JSON.
 5. Write a unit test that you can run to assert that the values can be parsed correctly. For example:
@@ -33,6 +33,7 @@ let account = try JSONDecoder().decode(Account.self, from: data)
 // TODO: assert that the account properties are correct
 
 ```
+6. Create another `Codable` type called `AccountsResponse` that models the full structure of `GetAccounts.json` (i.e. the list of accounts).  Write a unit test to check this.
 
  
 **Tip:**
