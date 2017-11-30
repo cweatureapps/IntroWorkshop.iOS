@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BB740102AB9699327198D07 /* Pods_IntroWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0509B77647E7E09AAB779ADD /* Pods_IntroWorkshop.framework */; };
 		5B2DA5BE1C3294E200C901FC /* GetAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BD1C3294E200C901FC /* GetAccounts.json */; };
 		5B2DA5C01C3295DB00C901FC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DA5BF1C3295DB00C901FC /* Account.swift */; };
 		5B2DA5C21C32964400C901FC /* AccountModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DA5C11C32964400C901FC /* AccountModelTests.swift */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A2D0460D116D7E46A14DB1 /* Pods-IntroWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroWorkshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop.release.xcconfig"; sourceTree = "<group>"; };
+		0509B77647E7E09AAB779ADD /* Pods_IntroWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntroWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2DA5BD1C3294E200C901FC /* GetAccounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetAccounts.json; sourceTree = "<group>"; };
 		5B2DA5BF1C3295DB00C901FC /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		5B2DA5C11C32964400C901FC /* AccountModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModelTests.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		5B3CAD2F1C14E95C005568DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5B93DD621D9002FD000BCE40 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		5B96E4C91FCFDAB100027BE6 /* AccountsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsResponse.swift; sourceTree = "<group>"; };
+		68507C42538B1AF4DD4FEE2E /* Pods-IntroWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB740102AB9699327198D07 /* Pods_IntroWorkshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1240EF74F75131E7D0F7B024 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68507C42538B1AF4DD4FEE2E /* Pods-IntroWorkshop.debug.xcconfig */,
+				04A2D0460D116D7E46A14DB1 /* Pods-IntroWorkshop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5B2DA5BC1C3294E200C901FC /* MockResponses */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				5B3AF5221C0FA33B00ABF7AA /* IntroWorkshopTests */,
 				5B2DA5BC1C3294E200C901FC /* MockResponses */,
 				5B3AF50C1C0FA33B00ABF7AA /* Products */,
+				1240EF74F75131E7D0F7B024 /* Pods */,
+				E3D0FE822D7A7F637AD0D49D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +167,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E3D0FE822D7A7F637AD0D49D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0509B77647E7E09AAB779ADD /* Pods_IntroWorkshop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B3AF5281C0FA33B00ABF7AA /* Build configuration list for PBXNativeTarget "IntroWorkshop" */;
 			buildPhases = (
+				659D785F849D9074DCDAF86F /* [CP] Check Pods Manifest.lock */,
 				5B3AF5071C0FA33B00ABF7AA /* Sources */,
 				5B3AF5081C0FA33B00ABF7AA /* Frameworks */,
 				5B3AF5091C0FA33B00ABF7AA /* Resources */,
+				848A94DB984968953DB59C19 /* [CP] Embed Pods Frameworks */,
+				D1AE3E51E09FAB2E0FD4C1C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		659D785F849D9074DCDAF86F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntroWorkshop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		848A94DB984968953DB59C19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1AE3E51E09FAB2E0FD4C1C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IntroWorkshop/Pods-IntroWorkshop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B3AF5071C0FA33B00ABF7AA /* Sources */ = {
@@ -383,6 +464,7 @@
 		};
 		5B3AF5291C0FA33B00ABF7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68507C42538B1AF4DD4FEE2E /* Pods-IntroWorkshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/IntroWorkshop/Supporting Files/Info.plist";
@@ -396,6 +478,7 @@
 		};
 		5B3AF52A1C0FA33B00ABF7AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A2D0460D116D7E46A14DB1 /* Pods-IntroWorkshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/IntroWorkshop/Supporting Files/Info.plist";
